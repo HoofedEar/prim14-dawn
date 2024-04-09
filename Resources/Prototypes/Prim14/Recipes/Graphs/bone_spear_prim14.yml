@@ -1,0 +1,19 @@
+﻿- type: constructionGraph
+  id: SpearBonePrim14
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: spear
+      steps:
+      - material: Bones
+        amount: 4
+        doAfter: 2
+      - material: WoodStick
+        amount: 1
+        doAfter: 1
+      - material: Cloth
+        amount: 1
+        doAfter: 1
+  - node: spear
+    entity: SpearBone

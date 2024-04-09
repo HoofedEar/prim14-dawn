@@ -1170,6 +1170,9 @@
   id: Steak
 
 - type: Tag
+  id: StickWood1
+
+- type: Tag
   id: StringInstrument
 
 - type: Tag
@@ -1177,7 +1180,7 @@
 
 - type: Tag
   id: SuitEVA
-  
+
 - type: Tag
   id: Sunglasses
 

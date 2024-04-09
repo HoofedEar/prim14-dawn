@@ -1,0 +1,10 @@
+﻿- type: construction
+  name: stick
+  id: WoodStick
+  graph: WoodStick
+  startNode: start
+  targetNode: WoodStick
+  category: construction-category-materials
+  description: A slender stick made of wood.
+  icon: { sprite: Prim14/parts.rsi, state: sticks }
+  objectType: Item

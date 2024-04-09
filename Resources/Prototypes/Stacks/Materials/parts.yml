@@ -5,3 +5,11 @@
   spawn: PartRodMetal1
   maxCount: 30
   itemSize: 1
+
+- type: stack
+  id: WoodStick
+  name: sticks
+  icon: { sprite: /Textures/Objects/Materials/parts.rsi, state: sticks }
+  spawn: PartStickWood1
+  maxCount: 30
+  itemSize: 1

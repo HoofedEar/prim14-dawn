@@ -1,0 +1,17 @@
+﻿- type: constructionGraph
+  id: PrimitiveBow
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: PrimitiveBow
+      steps:
+      - material: WoodStick
+        amount: 10
+        doAfter: 4
+      - material: Cloth
+        amount: 5
+        doAfter: 4
+
+  - node: PrimitiveBow
+    entity: BowImprovised
