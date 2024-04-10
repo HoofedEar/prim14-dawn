@@ -1,0 +1,94 @@
+﻿- type: entity
+  id: BonfirePrim14
+  suffix: Prim14
+  parent: Bonfire
+  name: bonfire
+  description: What can be better then late evening under the sky with guitar and friends.
+  components:
+  - type: EntityHeaterPowerless
+  - type: ItemPlacer
+    maxEntities: 6 # big grill, many steaks
+    whitelist:
+      components:
+      - Temperature
+  - type: Lava
+    fireStacks: 0.75
+  - type: PlaceableSurface
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+        mask:
+        - TabletopMachineMask
+        layer:
+        - Impassable
+        - MidImpassable
+        - LowImpassable
+        hard: false
+  - type: Sprite
+    noRot: true
+    sprite: Structures/Decoration/bonfire.rsi
+    layers:
+    - state: bonfire
+    - state: burning
+  - type: PointLight
+    radius: 5
+    energy: 3
+    color: "#FFC90C"
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: AmbientSound
+    volume: -5
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/fireplace.ogg
+  - type: AlwaysHot
+  - type: Construction
+    graph: BonfireBuild
+    node: FinishedBonfire
+  - type: TimedDespawn
+    lifetime: 180.0
+  - type: SpawnOnDespawn
+    prototype: Ash
+
+- type: constructionGraph
+  id: BonfireBuild
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: FinishedBonfire
+      steps:
+      - material: WoodPlank
+        amount: 10
+        doAfter: 8
+
+  - node: FinishedBonfire
+    entity: BonfirePrim14
+
+- type: construction
+  name: bonfire
+  id: BonfireConstruct
+  graph: BonfireBuild
+  startNode: start
+  targetNode: FinishedBonfire
+  category: construction-category-prim14-structures
+  description: Big, beautiful bonfire.
+  icon: { sprite: Structures/Decoration/bonfire.rsi, state: bonfire }
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
