@@ -1,8 +1,8 @@
 ﻿- type: entity
   parent: BaseRock
   id: BaseRockPrim14
-  name: boulder (prim14)
-  prefix: Prim14
+  name: boulder
+  suffix: Prim14
   abstract: true
   components:
   - type: Damageable
