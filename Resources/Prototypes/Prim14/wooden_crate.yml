@@ -1,0 +1,66 @@
+﻿- type: entity
+  parent: CrateGeneric
+  id: WoodenCrate
+  name: wooden crate
+  description: A simple wooden crate.
+  components:
+  - type: Icon
+    sprite: Prim14/wood_crate.rsi
+    state: icon
+  - type: Sprite
+    noRot: true
+    sprite: Prim14/wood_crate.rsi
+    layers:
+    - state: base
+      map: [ "enum.StorageVisualLayers.Base" ]
+    - state: closed
+      map: [ "enum.StorageVisualLayers.Door" ]
+    - state: welded
+      visible: false
+      map: [ "enum.WeldableLayers.BaseWelded" ]
+  - type: Construction
+    graph: CrateWooden
+    node: cratewooden
+    containers:
+    - entity_storage
+
+- type: constructionGraph
+  id: CrateWooden
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: cratewooden
+      steps:
+      - material: WoodPlank
+        amount: 5
+        doAfter: 5
+
+
+  - node: cratewooden
+    entity: WoodenCrate
+    edges:
+    - to: start
+      steps:
+      - tool: Screwing
+        doAfter: 5
+      conditions:
+      - !type:StorageWelded
+        welded: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlastic1
+        amount: 5
+      - !type:EmptyAllContainers
+      - !type:DeleteEntity
+
+- type: construction
+  name: wooden crate
+  id: CrateWooden
+  graph: CrateWooden
+  startNode: start
+  targetNode: cratewooden
+  category: construction-category-prim14-storage
+  description: A wooden crate for storing things.
+  icon: { sprite: Prim14/wood_crate.rsi, state: icon }
+  objectType: Structure

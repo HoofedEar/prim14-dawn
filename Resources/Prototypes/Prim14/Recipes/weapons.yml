@@ -19,3 +19,26 @@
   description: A spear with sharpened bone.
   icon: { sprite: Objects/Weapons/Melee/bone_spear.rsi, state: spear }
   objectType: Item
+
+- type: construction
+  name: stone arrowhead
+  id: StoneArrowhead
+  graph: StoneArrowhead
+  startNode: start
+  targetNode: FinishedArrowhead
+  category: construction-category-prim14-weapons
+  description: Smash two stones together to get something sharp!
+  icon: { sprite: Prim14/stone.rsi, state: stone_arrowhead }
+  objectType: Item
+
+
+- type: construction
+  name: stone arrow
+  id: StoneArrow
+  graph: StoneArrow
+  startNode: start
+  targetNode: FinishedArrow
+  category: construction-category-prim14-weapons
+  description: Use this with a bow for great effect.
+  icon: { sprite: Prim14/stone.rsi, state: stone_arrow }
+  objectType: Item

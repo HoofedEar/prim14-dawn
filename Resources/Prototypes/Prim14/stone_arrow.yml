@@ -1,0 +1,20 @@
+﻿- type: entity
+  parent: ArrowRegular
+  id: StoneArrow
+  name: stone arrow
+  suffix: Full
+  components:
+  - type: Sprite
+    layers:
+    - state: tail
+      color: white
+    - state: rod
+      color: brown
+    - state: tip
+      color: gray
+    - state: solution1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
+  - type: Construction
+    graph: StoneArrow
+    node: FinishedArrow

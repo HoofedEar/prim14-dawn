@@ -1,0 +1,44 @@
+﻿- type: entity
+  parent: BaseRock
+  id: BaseRockPrim14
+  name: boulder (prim14)
+  prefix: Prim14
+  abstract: true
+  components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Rock
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Stone:
+            min: 2
+            max: 8
+
+- type: entity
+  parent: BaseRockPrim14
+  id: FloraRockSolid01Prim14
+  components:
+  - type: Sprite
+    state: rocksolid01
+
+- type: entity
+  parent: BaseRockPrim14
+  id: FloraRockSolid02Prim14
+  components:
+  - type: Sprite
+    state: rocksolid02
+
+- type: entity
+  parent: BaseRockPrim14
+  id: FloraRockSolid03Prim14
+  components:
+  - type: Sprite
+    state: rocksolid03

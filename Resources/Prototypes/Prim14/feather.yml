@@ -1,0 +1,17 @@
+﻿- type: entity
+  parent: BaseItem
+  id: Feather
+  name: feather
+  description: Mighty handy for fletching arrows.
+  components:
+  - type: Sprite
+    sprite: Prim14/feather.rsi
+    state: feather
+    scale: 0.5,0.5
+  - type: Item
+    size: Tiny
+    sprite: Prim14/feather.rsi
+  - type: Stack
+    stackType: Feather
+    baseLayer: base
+    count: 1

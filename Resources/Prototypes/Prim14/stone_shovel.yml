@@ -1,0 +1,46 @@
+﻿- type: entity
+  parent: HydroponicsToolSpade
+  id: StoneToolShovel
+  name: stone shovel
+  description: A stone tool for digging and moving dirt.
+  components:
+  - type: Sprite
+    sprite: Prim14/stone.rsi
+    state: stone_shovel
+  - type: Item
+    sprite: Prim14/stone.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: 45
+    damage:
+      types:
+        Blunt: 5
+        Piercing: 1 # I guess you can stab it into them?
+
+- type: constructionGraph
+  id: StoneShovel
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: FinishedShovel
+      steps:
+      - material: WoodStick
+        amount: 1
+        doAfter: 2
+      - material: Stone
+        amount: 2
+        doAfter: 4
+
+  - node: FinishedShovel
+    entity: StoneToolShovel
+
+- type: construction
+  name: stone shovel
+  id: StoneShovel
+  graph: StoneShovel
+  startNode: start
+  targetNode: FinishedShovel
+  category: construction-category-prim14-tools
+  description: Handy for digging holes.
+  icon: { sprite: Prim14/stone.rsi, state: stone_shovel }
+  objectType: Item

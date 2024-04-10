@@ -1,0 +1,51 @@
+﻿- type: entity
+  name: stone axe
+  parent: BaseItem
+  id: StoneToolAxe
+  description: A mostly sharp stone hatchet. Primarily used for chopping wood.
+  components:
+  - type: Tag
+    tags:
+    - BotanyHatchet
+  - type: Sharp
+  - type: Sprite
+    sprite: Prim14/stone.rsi
+    state: stone_axe
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+    swingLeft: true
+    damage:
+      types:
+        Slash: 4
+        Piercing: 1
+  - type: Item
+    sprite: Prim14/stone.rsi
+
+- type: constructionGraph
+  id: StoneAxe
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: FinishedAxe
+      steps:
+      - material: WoodStick
+        amount: 1
+        doAfter: 2
+      - material: Stone
+        amount: 2
+        doAfter: 4
+
+  - node: FinishedAxe
+    entity: StoneToolAxe
+
+- type: construction
+  name: stone axe
+  id: StoneAxe
+  graph: StoneAxe
+  startNode: start
+  targetNode: FinishedAxe
+  category: construction-category-prim14-tools
+  description: Chop chop!
+  icon: { sprite: Prim14/stone.rsi, state: stone_axe }
+  objectType: Item
