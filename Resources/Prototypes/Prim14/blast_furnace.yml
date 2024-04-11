@@ -1,0 +1,60 @@
+﻿- type: entity
+  id: BlastFurnace
+  name: blast furnace
+  parent: OreProcessor
+  suffix: Prim14
+  description: Used for smelting ore to produce industrial metals.
+  components:
+  - type: Sprite
+    sprite: Prim14/metallurgy.rsi
+    layers:
+    - state: blast_furnace_on
+      shader: unshaded
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: blast_furnace
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: blast_furnace
+      shader: unshaded
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: blast_furnace
+      shader: unshaded
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Lathe
+    idleState: blast_furnace
+    runningState: blast_furnace_on
+    staticRecipes:
+    - SheetSteel30
+    - SheetGlass30
+    - IngotGold30
+    - IngotSilver30
+
+- type: constructionGraph
+  id: BlastFurnaceBuild
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: FinishedBlastFurnace
+      steps:
+      - material: Stone
+        amount: 30
+        doAfter: 15
+
+  - node: FinishedBlastFurnace
+    entity: BlastFurnace
+
+- type: construction
+  name: blast furnace
+  id: BlastFurnaceConstruct
+  graph: BlastFurnaceBuild
+  startNode: start
+  targetNode: FinishedBlastFurnace
+  category: construction-category-prim14-structures
+  description: Used for smelting ore to produce industrial metals.
+  icon: { sprite: Prim14/metallurgy.rsi, state: blast_furnace }
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
