@@ -9,8 +9,8 @@
     - BotanyHatchet
   - type: Sharp
   - type: Sprite
-    sprite: Prim14/stone.rsi
-    state: stone_axe
+    sprite: Prim14/stone_axe.rsi
+    state: icon
   - type: MeleeWeapon
     wideAnimationRotation: 135
     swingLeft: true
@@ -19,7 +19,7 @@
         Slash: 4
         Piercing: 1
   - type: Item
-    sprite: Prim14/stone.rsi
+    sprite: Prim14/stone_axe.rsi
 
 - type: constructionGraph
   id: StoneAxe
@@ -30,10 +30,10 @@
     - to: FinishedAxe
       steps:
       - material: WoodStick
-        amount: 1
+        amount: 2
         doAfter: 2
       - material: Stone
-        amount: 2
+        amount: 4
         doAfter: 4
 
   - node: FinishedAxe
@@ -47,5 +47,5 @@
   targetNode: FinishedAxe
   category: construction-category-prim14-tools
   description: Chop chop!
-  icon: { sprite: Prim14/stone.rsi, state: stone_axe }
+  icon: { sprite: Prim14/stone_axe.rsi, state: icon }
   objectType: Item

@@ -8,26 +8,14 @@
   },
   "states": [
     {
-      "name": "stone"
+      "name": "icon"
     },
     {
-      "name": "stone_arrowhead"
-    },
-    {
-      "name": "stone_arrow"
-    },
-    {
-      "name": "stone_axe"
-    },
-    {
-      "name": "stone_shovel"
-    },
-    {
-      "name": "axe-inhand-right",
+      "name": "inhand-right",
       "directions": 4
     },
     {
-      "name": "axe-inhand-left",
+      "name": "inhand-left",
       "directions": 4
     }
   ]

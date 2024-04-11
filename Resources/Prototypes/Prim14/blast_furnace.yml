@@ -24,10 +24,9 @@
     idleState: blast_furnace
     runningState: blast_furnace_on
     staticRecipes:
-    - SheetSteel30
-    - SheetGlass30
-    - IngotGold30
-    - IngotSilver30
+    - IngotIron30
+    - IngotGold30Prim14
+    - IngotSilver30Prim14
 
 - type: constructionGraph
   id: BlastFurnaceBuild
@@ -58,3 +57,81 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
+
+- type: latheRecipe
+  id: IngotGold30Prim14
+  result: IngotGold1
+  icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: gold }
+  completetime: 2
+  materials:
+    RawGold: 1500
+
+- type: latheRecipe
+  id: IngotSilver30Prim14
+  result: IngotSilver1
+  icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: silver }
+  completetime: 2
+  materials:
+    RawSilver: 1500
+
+- type: latheRecipe
+  id: IngotIron30
+  result: IngotIron1
+  icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: iron }
+  completetime: 2
+  materials:
+    RawIron: 1500
+
+
+- type: entity
+  parent: IngotBase
+  id: IngotIron
+  name: iron bar
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: Stack
+    stackType: Iron
+    baseLayer: base
+    layerStates:
+    - iron
+    - iron_2
+    - iron_3
+  - type: Sprite
+    state: iron_3
+    layers:
+    - state: iron_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: iron
+  - type: Appearance
+  - type: Extractable
+    grindableSolutionName: steel
+  - type: SolutionContainerManager
+    solutions:
+      gold:
+        reagents:
+        - ReagentId: Steel
+          Quantity: 10
+
+- type: entity
+  parent: IngotIron
+  id: IngotIron1
+  name: iron bar
+  suffix: Single
+  components:
+  - type: Sprite
+    state: iron
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: Iron
+  name: iron
+  icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: iron }
+  spawn: IngotIron1
+  maxCount: 30
+  itemSize: 1
