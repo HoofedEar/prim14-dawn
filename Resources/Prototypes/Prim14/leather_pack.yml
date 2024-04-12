@@ -1,0 +1,23 @@
+﻿- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackLeather
+  name: leather backpack
+  suffix: Prim14
+  components:
+  - type: Sprite
+    sprite: Prim14/backpack.rsi
+    state: icon
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackLeather
+  id: ClothingBackpackLeatherFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: StoneToolAxe
+    - id: PotatoSeeds
+    - id: BerrySeeds
+    - id: CottonSeeds
+    - id: FoodMeatCooked

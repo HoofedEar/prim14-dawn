@@ -1,0 +1,38 @@
+﻿- type: entity
+  id: CrateWoodenGravePrim14
+  suffix: Prim14
+  parent: CrateWoodenGrave
+  components:
+  - type: Construction
+    graph: DigGrave
+    node: finishedGrave
+
+
+- type: constructionGraph
+  id: DigGrave
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: finishedGrave
+      steps:
+      - tool: Digging
+        doAfter: 8
+
+  - node: finishedGrave
+    entity: CrateWoodenGravePrim14
+
+- type: construction
+  name: grave
+  id: GraveConstruct
+  graph: DigGrave
+  startNode: start
+  targetNode: finishedGrave
+  category: construction-category-prim14-structures
+  description: For when you need to bury something... or someone.
+  icon: { sprite: Structures/Storage/Crates/wooden_grave.rsi, state: base }
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

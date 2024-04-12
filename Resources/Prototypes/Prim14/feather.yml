@@ -3,6 +3,7 @@
   id: Feather
   name: feather
   description: Mighty handy for fletching arrows.
+  suffix: Prim14
   components:
   - type: Sprite
     sprite: Prim14/feather.rsi

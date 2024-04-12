@@ -6,7 +6,7 @@
   components:
   - type: PhysicalComposition
     materialComposition:
-      Wood: 50 #Half of a regular steel sheet to reflect the crafting recipe
+      Wood: 50
   - type: Stack
     stackType: WoodStick
     baseLayer: base
@@ -23,7 +23,7 @@
     - state: sticks_5
       map: ["base"]
   - type: Item
-    size: Normal
+    size: Small
   - type: Damageable
     damageContainer: Organic
     damageModifierSet: Wood
@@ -39,6 +39,9 @@
         reagents:
         - ReagentId: Wood
           Quantity: 5
+  - type: Construction
+    graph: StickWoodGraph
+    node: WoodStick
 
 - type: entity
   parent: PartStickWood
@@ -67,3 +70,31 @@
     state: sticks
   - type: Stack
     count: 1
+
+- type: construction
+  name: stick
+  id: StickWood
+  graph: StickWoodGraph
+  startNode: start
+  targetNode: WoodStick
+  category: construction-category-prim14-misc
+  description: A wooden stick that can be used for various purposes.
+  icon: { sprite: Prim14/parts.rsi, state: sticks }
+  objectType: Item
+
+- type: constructionGraph
+  id: StickWoodGraph
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: WoodStick
+      completed:
+      - !type:SetStackCount
+        amount: 2
+      steps:
+      - material: WoodPlank
+        amount: 1
+
+  - node: WoodStick
+    entity: PartStickWood

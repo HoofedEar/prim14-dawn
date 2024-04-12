@@ -2,6 +2,7 @@
   parent: CrateGeneric
   id: WoodenCrate
   name: wooden crate
+  suffix: Prim14
   description: A simple wooden crate.
   components:
   - type: Icon

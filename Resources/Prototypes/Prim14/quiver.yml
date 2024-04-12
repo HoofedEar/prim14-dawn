@@ -1,0 +1,39 @@
+﻿- type: entity
+  parent: ClothingBeltQuiver
+  id: ClothingBeltQuiverPrim14
+  name: quiver
+  description: Can hold up to 15 arrows, and fits snug around your waist.
+  components:
+  - type: Construction
+    graph: LeatherQuiver
+    node: finishedQuiver
+
+- type: constructionGraph
+  id: LeatherQuiver
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: finishedQuiver
+      steps:
+      - material: Leather
+        amount: 5
+        doAfter: 4
+      - material: Cloth
+        amount: 2
+        doAfter: 2
+
+  - node: finishedQuiver
+    entity: ClothingBeltQuiverPrim14
+
+- type: construction
+  name: quiver
+  id: LeatherQuiver
+  graph: LeatherQuiver
+  startNode: start
+  targetNode: finishedQuiver
+  category: construction-category-prim14-clothing
+  description: Can hold up to 15 arrows, and fits snug around your waist.
+  icon: { sprite: Clothing/Belt/quiver.rsi, state: icon }
+  objectType: Item
+

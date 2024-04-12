@@ -8,6 +8,7 @@
     sprite: Prim14/stone.rsi
     state: stone_arrowhead
   - type: Item
+    size: Tiny
     sprite: Prim14/stone.rsi
   - type: Construction
     graph: StoneArrowhead

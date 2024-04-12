@@ -20,6 +20,9 @@
         Piercing: 1
   - type: Item
     sprite: Prim14/stone_axe.rsi
+  - type: Construction
+    graph: StoneAxe
+    node: finishedAxe
 
 - type: constructionGraph
   id: StoneAxe
@@ -27,7 +30,7 @@
   graph:
   - node: start
     edges:
-    - to: FinishedAxe
+    - to: finishedAxe
       steps:
       - material: WoodStick
         amount: 2
@@ -36,7 +39,7 @@
         amount: 4
         doAfter: 4
 
-  - node: FinishedAxe
+  - node: finishedAxe
     entity: StoneToolAxe
 
 - type: construction
@@ -44,7 +47,7 @@
   id: StoneAxe
   graph: StoneAxe
   startNode: start
-  targetNode: FinishedAxe
+  targetNode: finishedAxe
   category: construction-category-prim14-tools
   description: Chop chop!
   icon: { sprite: Prim14/stone_axe.rsi, state: icon }

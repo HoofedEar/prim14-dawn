@@ -8,13 +8,21 @@
     sprite: Prim14/stone_shovel.rsi
     state: icon
   - type: Item
-    sprite: Prim14/stone.rsi
+    sprite: Prim14/stone_shovel.rsi
   - type: MeleeWeapon
     wideAnimationRotation: 45
     damage:
       types:
         Blunt: 5
         Piercing: 1 # I guess you can stab it into them?
+  - type: Construction
+    graph: StoneShovel
+    node: finishedShovel
+  - type: Tool
+    qualities:
+    - Digging
+    useSound:
+      collection: ShovelDig
 
 - type: constructionGraph
   id: StoneShovel
@@ -22,7 +30,7 @@
   graph:
   - node: start
     edges:
-    - to: FinishedShovel
+    - to: finishedShovel
       steps:
       - material: WoodStick
         amount: 2
@@ -31,7 +39,7 @@
         amount: 4
         doAfter: 4
 
-  - node: FinishedShovel
+  - node: finishedShovel
     entity: StoneToolShovel
 
 - type: construction
@@ -39,8 +47,13 @@
   id: StoneShovel
   graph: StoneShovel
   startNode: start
-  targetNode: FinishedShovel
+  targetNode: finishedShovel
   category: construction-category-prim14-tools
   description: Handy for digging holes.
   icon: { sprite: Prim14/stone_shovel.rsi, state: icon }
   objectType: Item
+
+- type: soundCollection
+  id: ShovelDig
+  files:
+  - /Audio/Items/shovel_dig.ogg

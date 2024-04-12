@@ -19,15 +19,15 @@
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: Item
-    size: Normal
+    size: Ginormous
   - type: Clothing
     sprite: Objects/Weapons/Melee/claymore.rsi
     slots:
     - back
   - type: DisarmMalus
   - type: Construction
-    graph: WoodenBucklerPrim14Graph
-    node: woodenBuckler
+    graph: ClaymorePrim14Graph
+    node: claymore
 
 - type: construction
   name: claymore

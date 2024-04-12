@@ -11,3 +11,7 @@ construction-category-prim14-furniture = Furniture
 construction-category-prim14-storage = Storage
 construction-category-prim14-clothing = Clothing
 construction-category-prim14-misc = Misc
+
+# Tools
+tool-quality-digging-name = Digging
+tool-quality-digging-tool-name = Shovel

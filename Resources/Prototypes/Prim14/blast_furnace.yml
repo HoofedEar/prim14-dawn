@@ -20,6 +20,17 @@
     - state: blast_furnace
       shader: unshaded
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
   - type: Lathe
     idleState: blast_furnace
     runningState: blast_furnace_on

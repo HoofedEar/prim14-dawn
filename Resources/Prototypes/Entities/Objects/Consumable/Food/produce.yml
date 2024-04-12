@@ -1699,6 +1699,7 @@
           Quantity: 4
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/berries.rsi
+    scale: 0.7, 0.7
   - type: Produce
     seedId: berries
   - type: Extractable

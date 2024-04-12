@@ -762,6 +762,8 @@
       amount: 5
     - id: MaterialBones1
       amount: 3
+    - id: RawHide
+      amount: 1
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
