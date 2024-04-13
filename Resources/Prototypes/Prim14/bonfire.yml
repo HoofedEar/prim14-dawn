@@ -11,8 +11,9 @@
     whitelist:
       components:
       - Temperature
-  - type: Lava
-    fireStacks: 0.75
+  # Removed for being too mean. Way too easy to die accidentally.
+  #- type: Lava
+  #  fireStacks: 0.10
   - type: PlaceableSurface
   - type: Fixtures
     fixtures:

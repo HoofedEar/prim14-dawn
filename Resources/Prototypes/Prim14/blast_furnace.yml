@@ -31,6 +31,8 @@
           collection: WoodDestroy
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: ApcPowerReceiver
+    needsPower: false
   - type: Lathe
     idleState: blast_furnace
     runningState: blast_furnace_on

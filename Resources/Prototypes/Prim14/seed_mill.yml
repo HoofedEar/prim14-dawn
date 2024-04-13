@@ -27,6 +27,8 @@
   - type: Construction
     graph: SeedMillBuild
     node: FinishedSeedMill
+  - type: ApcPowerReceiver
+    needsPower: false
 
 - type: constructionGraph
   id: SeedMillBuild
