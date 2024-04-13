@@ -11,8 +11,6 @@
       orGroup: GiftPool
     - id: OatSeeds
       orGroup: GiftPool
-    - id: CottonSeeds
-      orGroup: GiftPool
     - id: BerrySeeds
       orGroup: GiftPool
     - id: OrangeSeeds

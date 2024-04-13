@@ -2,6 +2,7 @@
   name: torch
   parent: Torch
   id: TorchPrim14
+  suffix: Prim14
   description: A torch fashioned from some wood.
   components:
   - type: PointLight
