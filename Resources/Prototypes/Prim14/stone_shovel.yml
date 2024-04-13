@@ -3,6 +3,7 @@
   id: StoneToolShovel
   name: stone shovel
   description: A stone tool for digging and moving dirt.
+  suffix: Prim14
   components:
   - type: Sprite
     sprite: Prim14/stone_shovel.rsi

@@ -1,0 +1,37 @@
+﻿- type: entity
+  name: wooden cup
+  parent: DrinkMug
+  id: WoodenCup
+  description: A small wooden cup.
+  components:
+  - type: Sprite
+    sprite: Prim14/wooden_cup.rsi
+  - type: Construction
+    graph: WoodenCupPrim14
+    node: cup
+
+- type: construction
+  name: wooden cup
+  id: WoodenCupPrim14
+  graph: WoodenCupPrim14
+  startNode: start
+  targetNode: cup
+  category: construction-category-prim14-tools
+  description: A small wooden cup.
+  icon: { sprite: Prim14/wooden_cup.rsi, state: icon-0 }
+  objectType: Item
+
+- type: constructionGraph
+  id: WoodenCupPrim14
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: cup
+      steps:
+      - material: WoodPlank
+        amount: 1
+        doAfter: 1
+
+  - node: cup
+    entity: WoodenCup

@@ -3,6 +3,7 @@
   parent: BaseItem
   id: StoneToolAxe
   description: A mostly sharp stone hatchet. Primarily used for chopping wood.
+  suffix: Prim14
   components:
   - type: Tag
     tags:
