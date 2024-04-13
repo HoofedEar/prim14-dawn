@@ -8,8 +8,8 @@
   - type: PointLight
     enabled: false
     color: "#FFC90C"
-    radius: 1.0
-    energy: 5.0
+    radius: 0.4
+    energy: 2.5
     netsync: false
   - type: Construction
     graph: LightTorchPrim14

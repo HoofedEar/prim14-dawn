@@ -60,7 +60,7 @@
     graph: BonfireBuild
     node: FinishedBonfire
   - type: TimedDespawn
-    lifetime: 180.0
+    lifetime: 360.0
   - type: SpawnOnDespawn
     prototype: Ash
 

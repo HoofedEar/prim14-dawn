@@ -7,17 +7,11 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: WheatSeeds
-      orGroup: GiftPool
-    - id: OatSeeds
-      orGroup: GiftPool
     - id: BerrySeeds
       orGroup: GiftPool
     - id: OrangeSeeds
       orGroup: GiftPool
     - id: PotatoSeeds
-      orGroup: GiftPool
-    - id: SugarcaneSeeds
       orGroup: GiftPool
     - id: TomatoSeeds
       orGroup: GiftPool
