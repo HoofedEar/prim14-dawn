@@ -1,0 +1,12 @@
+﻿- type: construction
+  name: gauze
+  id: GauzePrim14
+  graph: Gauze
+  startNode: start
+  targetNode: gauze
+  category: construction-category-prim14-tools
+  objectType: Item
+  description: When you've really got nothing left.
+  icon:
+    sprite: Objects/Specific/Medical/medical.rsi
+    state: gauze

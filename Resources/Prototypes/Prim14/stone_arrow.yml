@@ -2,7 +2,6 @@
   parent: ArrowRegular
   id: StoneArrow
   name: stone arrow
-  suffix: Full
   components:
   - type: Sprite
     layers:

@@ -9,7 +9,6 @@
     state: icon
 
 - type: entity
-  noSpawn: true
   parent: ClothingBackpackLeather
   id: ClothingBackpackLeatherFilled
   suffix: Filled
@@ -17,7 +16,7 @@
   - type: StorageFill
     contents:
     - id: StoneToolAxe
-    - id: PotatoSeeds
-    - id: BerrySeeds
-    - id: CottonSeeds
+    - id: PresentRandomSeedPrim14
+    - id: PresentRandomSeedPrim14
+    - id: PresentRandomSeedPrim14
     - id: FoodMeatCooked
