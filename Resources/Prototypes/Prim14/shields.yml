@@ -1,0 +1,39 @@
+﻿- type: entity
+  name: wooden buckler
+  parent: WoodenBuckler
+  id: WoodenBucklerPrim14
+  suffix: Prim14
+  description: A small round wooden makeshift shield.
+  components:
+  - type: Construction
+    graph: WoodenBucklerPrim14Graph
+    node: woodenBuckler
+
+- type: construction
+  name: wooden buckler
+  id: WoodenBucklerBuildPrim14
+  graph: WoodenBucklerPrim14Graph
+  startNode: start
+  targetNode: woodenBuckler
+  category: construction-category-prim14-weapons
+  description: A nicely carved wooden shield!
+  icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: buckler-icon }
+  objectType: Item
+
+- type: constructionGraph
+  id: WoodenBucklerPrim14Graph
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: woodenBuckler
+      steps:
+      - material: WoodPlank
+        amount: 5
+        doAfter: 2
+      - material: Iron
+        amount: 5
+        doAfter: 2
+
+  - node: woodenBuckler
+    entity: WoodenBuckler

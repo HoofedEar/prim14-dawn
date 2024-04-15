@@ -1,0 +1,41 @@
+﻿- type: entity
+  name: torch
+  parent: Torch
+  id: TorchPrim14
+  suffix: Prim14
+  description: A torch fashioned from some wood.
+  components:
+  - type: PointLight
+    enabled: false
+    color: "#FFC90C"
+    radius: 0.4
+    energy: 2.5
+    netsync: false
+  - type: Construction
+    graph: LightTorchPrim14
+    node: torch
+
+- type: construction
+  name: torch
+  id: LightTorchPrim14
+  graph: LightTorchPrim14
+  startNode: start
+  targetNode: torch
+  category: construction-category-prim14-tools
+  description: A torch fashioned from some wood.
+  icon: { sprite: Objects/Misc/torch.rsi, state: icon }
+  objectType: Item
+
+- type: constructionGraph
+  id: LightTorchPrim14
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: torch
+      steps:
+      - material: WoodStick
+        amount: 2
+        doAfter: 2
+  - node: torch
+    entity: TorchPrim14

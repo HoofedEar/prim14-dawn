@@ -1,0 +1,256 @@
+﻿- type: construction
+  name: wooden chair
+  id: ChairWoodPrim14
+  graph: Seat
+  startNode: start
+  targetNode: chairWood
+  category: construction-category-prim14-furniture
+  description: You sit in this. Either by will or force.
+  icon:
+    sprite: Structures/Furniture/chairs.rsi
+    state: wooden
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wooden bench
+  id: ChairWoodBenchPrim14
+  graph: Seat
+  startNode: start
+  targetNode: chairWoodBench
+  category: construction-category-prim14-furniture
+  description: Did you get a splinter? Well, at least it’s eco friendly.
+  icon:
+    sprite: Structures/Furniture/chairs.rsi
+    state: wooden-bench
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wood counter
+  id: TableCounterWoodPrim14
+  graph: Table
+  startNode: start
+  targetNode: CounterWood
+  category: construction-category-prim14-furniture
+  description: Do not apply fire to this. Rumour says it burns easily.
+  icon:
+    sprite: Structures/Furniture/Tables/counterwood.rsi
+    state: full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wooden barricade
+  id: BarricadePrim14
+  graph: Barricade
+  startNode: start
+  targetNode: barricadefull
+  category: construction-category-prim14-structures
+  description: An improvised barricade made out of wooden planks.
+  icon:
+    sprite: Structures/barricades.rsi
+    state: barricade_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wooden barricade
+  id: BarricadeDirectionalPrim14
+  graph: BarricadeDirectional
+  startNode: start
+  targetNode: barricadefull
+  category: construction-category-prim14-structures
+  description: An improvised barricade made out of wooden planks.
+  icon:
+    sprite: Structures/barricades.rsi
+    state: barricade_directional
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+  #Wooden fence high
+- type: construction
+  name: wooden high fence
+  id: FenceWoodPrim14
+  graph: FenceWood
+  startNode: start
+  targetNode: straight
+  category: construction-category-prim14-structures
+  description: Part of a wooden fence meant to cordon off areas.
+  icon:
+    sprite: Structures/Walls/wooden_fence.rsi
+    state: straight
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wooden high fence end
+  id: FenceWoodEndPrim14
+  graph: FenceWood
+  startNode: start
+  targetNode: end
+  category: construction-category-prim14-structures
+  description: Part of a wooden fence meant to cordon off areas.
+  icon:
+    sprite: Structures/Walls/wooden_fence.rsi
+    state: end
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wooden high fence corner
+  id: FenceWoodCornerPrim14
+  graph: FenceWood
+  startNode: start
+  targetNode: corner
+  category: construction-category-prim14-structures
+  description: Part of a wooden fence meant to cordon off areas.
+  icon:
+    sprite: Structures/Walls/wooden_fence.rsi
+    state: corner
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wooden high fence t-junction
+  id: FenceWoodTJunctionPrim14
+  graph: FenceWood
+  startNode: start
+  targetNode: tjunction
+  category: construction-category-prim14-structures
+  description: Part of a wooden fence meant to cordon off areas.
+  icon:
+    sprite: Structures/Walls/wooden_fence.rsi
+    state: tjunction
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wooden high fence gate
+  id: FenceWoodGatePrim14
+  graph: FenceWood
+  startNode: start
+  targetNode: gate
+  category: construction-category-prim14-structures
+  description: Part of a wooden fence meant to cordon off areas.
+  icon:
+    sprite: Structures/Walls/wooden_fence.rsi
+    state: door_closed
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+  #Wooden fence small
+- type: construction
+  name: wooden small fence
+  id: FenceWoodSmallPrim14
+  graph: FenceWood
+  startNode: start
+  targetNode: straight_small
+  category: construction-category-prim14-structures
+  description: Part of a wooden fence meant to cordon off areas.
+  icon:
+    sprite: Structures/Walls/wooden_fence.rsi
+    state: straight_small
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wooden small fence end
+  id: FenceWoodEndSmallPrim14
+  graph: FenceWood
+  startNode: start
+  targetNode: end_small
+  category: construction-category-prim14-structures
+  description: Part of a wooden fence meant to cordon off areas.
+  icon:
+    sprite: Structures/Walls/wooden_fence.rsi
+    state: end_small
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wooden small fence corner
+  id: FenceWoodCornerSmallPrim14
+  graph: FenceWood
+  startNode: start
+  targetNode: corner_small
+  category: construction-category-prim14-structures
+  description: Part of a wooden fence meant to cordon off areas.
+  icon:
+    sprite: Structures/Walls/wooden_fence.rsi
+    state: corner_small
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wooden small fence t-junction
+  id: FenceWoodTJunctionSmallPrim14
+  graph: FenceWood
+  startNode: start
+  targetNode: tjunction_small
+  category: construction-category-prim14-structures
+  description: Part of a wooden fence meant to cordon off areas.
+  icon:
+    sprite: Structures/Walls/wooden_fence.rsi
+    state: tjunction_small
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: wooden small fence gate
+  id: FenceWoodGateSmallPrim14
+  graph: FenceWood
+  startNode: start
+  targetNode: gate_small
+  category: construction-category-prim14-structures
+  description: Part of a wooden fence meant to cordon off areas.
+  icon:
+    sprite: Structures/Walls/wooden_fence.rsi
+    state: door_closed_small
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

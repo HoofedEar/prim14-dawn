@@ -1,0 +1,6 @@
+﻿- type: tool
+  id: Digging
+  name: tool-quality-digging-name
+  toolName: tool-quality-digging-tool-name
+  spawn: StoneToolShovel
+  icon: { sprite: Prim14/stone_shovel.rsi, state: icon }

@@ -172,6 +172,11 @@ namespace Content.Client.Construction.UI
                         continue;
                 }
 
+                // if (!recipe.Category.Contains("prim14"))
+                // {
+                //     continue;
+                // }
+
                 recipes.Add(recipe);
             }
 
@@ -195,6 +200,11 @@ namespace Content.Client.Construction.UI
             foreach (var prototype in _prototypeManager.EnumeratePrototypes<ConstructionPrototype>())
             {
                 var category = prototype.Category;
+
+                // if (!category.Contains("prim14"))
+                // {
+                //     continue;
+                // }
 
                 if (!string.IsNullOrEmpty(category))
                     uniqueCategories.Add(category);

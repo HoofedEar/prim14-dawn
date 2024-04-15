@@ -1,0 +1,24 @@
+﻿- type: entity
+  parent: OreBase
+  id: Stone
+  description: A small piece of rock.
+  name: stone
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: Stone
+  - type: Sprite
+    sprite: Prim14/stone.rsi
+    state: stone
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Stone: 500
+
+- type: entity
+  parent: Stone
+  id: Stone1
+  suffix: Single
+  components:
+  - type: Stack
+    count: 1

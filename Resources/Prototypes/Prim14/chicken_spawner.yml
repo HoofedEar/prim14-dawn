@@ -1,0 +1,13 @@
+﻿- type: entity
+  name: Chicken Spawner
+  id: SpawnMobChicken
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: chicken-0
+      sprite: Mobs/Animals/chicken.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobChicken

@@ -1,0 +1,54 @@
+﻿- type: constructionGraph
+  id: PrimitiveBow
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: PrimitiveBow
+      steps:
+      - material: WoodStick
+        amount: 10
+        doAfter: 4
+      - material: Cloth
+        amount: 5
+        doAfter: 4
+
+  - node: PrimitiveBow
+    entity: BowImprovised
+
+- type: constructionGraph
+  id: StoneArrowhead
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: FinishedArrowhead
+      steps:
+      - material: Stone
+        amount: 2
+        doAfter: 4
+
+  - node: FinishedArrowhead
+    entity: StoneArrowhead
+
+
+- type: constructionGraph
+  id: StoneArrow
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: FinishedArrow
+      steps:
+      - material: StoneArrowhead
+        amount: 1
+        doAfter: 2
+      - material: WoodStick
+        amount: 1
+        doAfter: 2
+      - material: Feather
+        amount: 1
+        doAfter: 1
+
+  - node: FinishedArrow
+    entity: StoneArrow

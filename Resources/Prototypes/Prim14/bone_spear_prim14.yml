@@ -1,0 +1,54 @@
+﻿- type: entity
+  name: bone spear
+  parent: Spear
+  id: SpearBoneWooden
+  description: A spear made of bones.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/bone_spear.rsi
+  - type: Construction
+    graph: SpearBonePrim14
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30 #excess damage avoids cost of spawning entities.
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+          params:
+            volume: -4
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PartStickWood1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: constructionGraph
+  id: SpearBonePrim14
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: spear
+      steps:
+      - material: Bones
+        amount: 4
+        doAfter: 2
+      - material: WoodStick
+        amount: 1
+        doAfter: 1
+      - material: Cloth
+        amount: 1
+        doAfter: 1
+  - node: spear
+    entity: SpearBoneWooden

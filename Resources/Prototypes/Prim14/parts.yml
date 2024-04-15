@@ -1,0 +1,100 @@
+﻿- type: entity
+  parent: PartBase
+  id: PartStickWood
+  name: stick
+  suffix: Full
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      Wood: 50
+  - type: Stack
+    stackType: WoodStick
+    baseLayer: base
+    layerStates:
+    - sticks
+    - sticks_2
+    - sticks_3
+    - sticks_4
+    - sticks_5
+  - type: Sprite
+    sprite: Prim14/parts.rsi
+    state: sticks_5
+    layers:
+    - state: sticks_5
+      map: ["base"]
+  - type: Item
+    size: Small
+  - type: Damageable
+    damageContainer: Organic
+    damageModifierSet: Wood
+  #    heldPrefix: rods
+  - type: Appearance
+  - type: StaticPrice
+    price: 0
+  - type: StackPrice
+    price: 5
+  - type: SolutionContainerManager
+    solutions:
+      rod:
+        reagents:
+        - ReagentId: Wood
+          Quantity: 5
+  - type: Construction
+    graph: StickWoodGraph
+    node: WoodStick
+
+- type: entity
+  parent: PartStickWood
+  id: PartStickWood10
+  name: stick
+  suffix: 10
+  components:
+  - type: Tag
+    tags:
+    - StickWood1
+  - type: Sprite
+    state: sticks
+  - type: Stack
+    count: 10
+
+- type: entity
+  parent: PartStickWood
+  id: PartStickWood1
+  name: stick
+  suffix: Single
+  components:
+  - type: Tag
+    tags:
+    - StickWood1
+  - type: Sprite
+    state: sticks
+  - type: Stack
+    count: 1
+
+- type: construction
+  name: stick
+  id: StickWood
+  graph: StickWoodGraph
+  startNode: start
+  targetNode: WoodStick
+  category: construction-category-prim14-misc
+  description: A wooden stick that can be used for various purposes.
+  icon: { sprite: Prim14/parts.rsi, state: sticks }
+  objectType: Item
+
+- type: constructionGraph
+  id: StickWoodGraph
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: WoodStick
+      completed:
+      - !type:SetStackCount
+        amount: 2
+      steps:
+      - material: WoodPlank
+        amount: 1
+
+  - node: WoodStick
+    entity: PartStickWood

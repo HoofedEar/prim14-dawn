@@ -1,0 +1,31 @@
+﻿- type: stack
+  id: Stone
+  name: stone
+  icon: { sprite: /Textures/Prim14/stone.rsi, state: stone }
+  spawn: Stone1
+  maxCount: 30
+  itemSize: 2
+
+- type: stack
+  id: StoneArrowhead
+  name: stone arrowhead
+  icon: { sprite: /Textures/Prim14/stone.rsi, state: stone_arrowhead }
+  spawn: StoneArrowhead
+  maxCount: 30
+  itemSize: 1
+
+- type: stack
+  id: Feather
+  name: feather
+  icon: { sprite: /Textures/Prim14/feather.rsi, state: feather, scale: 0.5,0.5 }
+  spawn: Feather
+  maxCount: 30
+  itemSize: 1
+
+- type: stack
+  id: Leather
+  name: leather
+  icon: { sprite: /Textures/Prim14/leather.rsi, state: icon}
+  spawn: Leather
+  maxCount: 5
+  itemSize: 1

@@ -1,0 +1,19 @@
+﻿- type: entity
+  parent: BaseItem
+  id: StoneArrowhead
+  name: stone arrowhead
+  description: Careful, it's sharp.
+  components:
+  - type: Sprite
+    sprite: Prim14/stone.rsi
+    state: stone_arrowhead
+  - type: Item
+    size: Tiny
+    sprite: Prim14/stone.rsi
+  - type: Construction
+    graph: StoneArrowhead
+    node: FinishedArrowhead
+  - type: Stack
+    stackType: StoneArrowhead
+    baseLayer: base
+    count: 1

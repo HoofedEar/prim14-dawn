@@ -1,0 +1,38 @@
+﻿- type: entity
+  id: SoilPrim14
+  suffix: Prim14
+  parent: hydroponicsSoil
+  components:
+  - type: Construction
+    graph: DigSoil
+    node: finishedSoil
+
+
+- type: constructionGraph
+  id: DigSoil
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: finishedSoil
+      steps:
+      - tool: Digging
+        doAfter: 4
+
+  - node: finishedSoil
+    entity: SoilPrim14
+
+- type: construction
+  name: farming soil
+  id: SoilConstruct
+  graph: DigSoil
+  startNode: start
+  targetNode: finishedSoil
+  category: construction-category-prim14-structures
+  description: Plant your crops here.
+  icon: { sprite: Structures/Hydroponics/misc.rsi, state: soil }
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

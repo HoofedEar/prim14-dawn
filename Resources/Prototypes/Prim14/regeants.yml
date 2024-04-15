@@ -1,0 +1,15 @@
+﻿- type: material
+  id: Stone
+  stackEntity: Stone1
+  name: materials-stone
+  unit: materials-unit-chunk
+  icon: { sprite: Prim14/stone.rsi, state: stone }
+  price: 0.00
+
+- type: material
+  id: Iron
+  stackEntity: IngotIron1
+  name: materials-iron
+  unit: materials-unit-chunk
+  icon: { sprite: Objects/Materials/ingots.rsi, state: iron }
+  price: 0.00

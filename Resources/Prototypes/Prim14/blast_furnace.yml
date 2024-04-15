@@ -1,0 +1,150 @@
+﻿- type: entity
+  id: BlastFurnace
+  name: blast furnace
+  parent: OreProcessor
+  suffix: Prim14
+  description: Used for smelting ore to produce industrial metals.
+  components:
+  - type: Sprite
+    sprite: Prim14/metallurgy.rsi
+    layers:
+    - state: blast_furnace_on
+      shader: unshaded
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: blast_furnace
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: blast_furnace
+      shader: unshaded
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: blast_furnace
+      shader: unshaded
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Lathe
+    idleState: blast_furnace
+    runningState: blast_furnace_on
+    staticRecipes:
+    - IngotIron30
+    - IngotGold30Prim14
+    - IngotSilver30Prim14
+
+- type: constructionGraph
+  id: BlastFurnaceBuild
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: FinishedBlastFurnace
+      steps:
+      - material: Stone
+        amount: 30
+        doAfter: 15
+
+  - node: FinishedBlastFurnace
+    entity: BlastFurnace
+
+- type: construction
+  name: blast furnace
+  id: BlastFurnaceConstruct
+  graph: BlastFurnaceBuild
+  startNode: start
+  targetNode: FinishedBlastFurnace
+  category: construction-category-prim14-structures
+  description: Used for smelting ore to produce industrial metals.
+  icon: { sprite: Prim14/metallurgy.rsi, state: blast_furnace }
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: latheRecipe
+  id: IngotGold30Prim14
+  result: IngotGold1
+  icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: gold }
+  completetime: 2
+  materials:
+    RawGold: 1500
+
+- type: latheRecipe
+  id: IngotSilver30Prim14
+  result: IngotSilver1
+  icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: silver }
+  completetime: 2
+  materials:
+    RawSilver: 1500
+
+- type: latheRecipe
+  id: IngotIron30
+  result: IngotIron1
+  icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: iron }
+  completetime: 2
+  materials:
+    RawIron: 1500
+
+
+- type: entity
+  parent: IngotBase
+  id: IngotIron
+  name: iron bar
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: Stack
+    stackType: Iron
+    baseLayer: base
+    layerStates:
+    - iron
+    - iron_2
+    - iron_3
+  - type: Sprite
+    state: iron_3
+    layers:
+    - state: iron_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: iron
+  - type: Appearance
+  - type: Extractable
+    grindableSolutionName: steel
+  - type: SolutionContainerManager
+    solutions:
+      gold:
+        reagents:
+        - ReagentId: Steel
+          Quantity: 10
+
+- type: entity
+  parent: IngotIron
+  id: IngotIron1
+  name: iron bar
+  suffix: Single
+  components:
+  - type: Sprite
+    state: iron
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: Iron
+  name: iron
+  icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: iron }
+  spawn: IngotIron1
+  maxCount: 30
+  itemSize: 1

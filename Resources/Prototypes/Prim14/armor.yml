@@ -1,0 +1,97 @@
+﻿- type: entity
+  parent: ClothingOuterArmorCult
+  id: ClothingOuterArmorCultPrim14
+  suffix: Prim14
+  components:
+  - type: Construction
+    graph: AcolyteArmorPrim14
+    node: armor
+
+- type: entity
+  parent: ClothingHeadHelmetBone
+  id: ClothingHeadHelmetBonePrim14
+  suffix: Prim14
+  components:
+  - type: Sprite
+    scale: 0.7, 0.7
+  - type: Construction
+    graph: BoneHelmetPrim14
+    node: helmet
+
+- type: construction
+  name: bone armor
+  id: BoneArmorPrim14
+  graph: BoneArmorPrim14
+  startNode: start
+  targetNode: armor
+  category: construction-category-prim14-clothing
+  description: Armor made of bones.
+  icon: { sprite: Clothing/OuterClothing/Armor/bone_armor.rsi, state: icon }
+  objectType: Item
+
+- type: construction
+  name: bone helmet
+  id: BoneHelmetPrim14
+  graph: BoneHelmetPrim14
+  startNode: start
+  targetNode: helmet
+  category: construction-category-prim14-clothing
+  description: Helmet made of bones.
+  icon: { sprite: Clothing/Head/Helmets/bone_helmet.rsi, state: icon }
+  objectType: Item
+
+- type: construction
+  name: acolyte armor
+  id: AcolyteArmorPrim14
+  graph: AcolyteArmorPrim14
+  startNode: start
+  targetNode: armor
+  category: construction-category-prim14-clothing
+  description: An evil-looking piece of cult armor, made of bones.
+  icon: { sprite: Clothing/OuterClothing/Armor/cult_armour.rsi, state: icon }
+  objectType: Item
+
+
+# Construction Graphs
+
+- type: constructionGraph
+  id: BoneArmorPrim14
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: armor
+      steps:
+      - material: Bones
+        amount: 15
+        doAfter: 6
+  - node: armor
+    entity: ClothingOuterArmorBone
+
+- type: constructionGraph
+  id: BoneHelmetPrim14
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: helmet
+      steps:
+      - material: Bones
+        amount: 8
+        doAfter: 4
+  - node: helmet
+    entity: ClothingHeadHelmetBonePrim14
+
+- type: constructionGraph
+  id: AcolyteArmorPrim14
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: armor
+      steps:
+      - material: Bones
+        amount: 20
+        doAfter: 6
+  - node: armor
+    entity: ClothingOuterArmorCultPrim14

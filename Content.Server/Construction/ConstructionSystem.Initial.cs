@@ -14,6 +14,7 @@ using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 using Content.Shared.Storage;
+using Content.Shared.Tools.Components;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -158,6 +159,7 @@ namespace Content.Server.Construction
 
             var steps = new List<ConstructionGraphStep>();
             var used = new HashSet<EntityUid>();
+            var requireHands = false;
 
             foreach (var step in edge.Steps)
             {
@@ -226,6 +228,28 @@ namespace Content.Server.Construction
                         }
 
                         break;
+                    case ToolConstructionGraphStep toolInsertStep:
+                    {
+                        // Get the user's hands.
+                        if (!TryComp(user, out HandsComponent? hands))
+                            break;
+
+                        // Check if the user has the tool we need.
+                        var held = hands.ActiveHandEntity;
+                        if (held == null || !TryComp(held, out ToolComponent? tool))
+                            break;
+
+                        // Check if the tool has the quality we need.
+                        if (!_toolSystem.HasQuality(held.Value, toolInsertStep.Tool, tool))
+                            break;
+
+
+                        // If we're here, we have a valid tool.
+                        // Require that the user keeps the tool in their hands.
+                        requireHands = true;
+                        handled = true;
+                        break;
+                    }
                 }
 
                 if (handled == false)
@@ -248,7 +272,8 @@ namespace Content.Server.Construction
             {
                 BreakOnDamage = true,
                 BreakOnMove = true,
-                NeedHand = false,
+                BreakOnHandChange = requireHands,
+                NeedHand = requireHands,
                 // allow simultaneously starting several construction jobs using the same stack of materials.
                 CancelDuplicate = false,
                 BlockDuplicate = false,
@@ -498,7 +523,8 @@ namespace Content.Server.Construction
                             valid = true;
                         break;
                     case ToolConstructionGraphStep _:
-                        throw new InvalidDataException("Invalid first step for item recipe!");
+                        valid = true;
+                        break;
                 }
 
                 if (valid)

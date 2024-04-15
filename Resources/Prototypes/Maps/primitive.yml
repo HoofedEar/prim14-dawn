@@ -1,0 +1,21 @@
+﻿- type: gameMap
+  id: Primitive
+  mapName: Primitive
+  mapPath: /Maps/Prim14/portal.yml
+  minPlayers: 0
+  maxPlayers: 30
+  stations:
+    Primitive:
+      stationProto: StandardNanotrasenStation
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: '{0} Primitive {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: 'P4'
+      - type: StationJobs
+        overflowJobs:
+        - Passenger
+        availableJobs:
+          Passenger: [ -1, -1 ]
+

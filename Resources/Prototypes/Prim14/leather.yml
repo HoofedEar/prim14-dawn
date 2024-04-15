@@ -1,0 +1,75 @@
+﻿- type: entity
+  parent: BaseItem
+  name: raw hide
+  id: RawHide
+  suffix: Prim14
+  description: Raw hide from an animal.
+  components:
+  - type: Sprite
+    sprite: Prim14/raw_hide.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: Prim14/raw_hide.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        # less mass so it can cook faster, a single strip of bacon isnt 5kg
+        density: 1
+        mask:
+        - ItemMask
+        restitution: 0.3  # fite me
+        friction: 0.2
+  - type: Temperature
+    currentTemperature: 290
+  - type: InternalTemperature
+    thickness: 0.02
+    area: 0.02
+    conductivity: 0.43
+  - type: Construction
+    graph: HideToLeather
+    node: start
+    defaultTarget: leather
+
+
+- type: entity
+  parent: BaseItem
+  id: Leather
+  suffix: Prim14
+  name: leather
+  description: Malleable and durable.
+  components:
+  - type: Sprite
+    sprite: Prim14/leather.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: Prim14/leather.rsi
+  - type: Stack
+    stackType: Leather
+    baseLayer: base
+    count: 1
+  - type: Construction
+    graph: HideToLeather
+    node: leather
+
+
+
+- type: constructionGraph
+  id: HideToLeather
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: leather
+      completed:
+      - !type:PlaySound
+        sound: /Audio/Effects/sizzle.ogg
+      steps:
+      - minTemperature: 335
+
+  - node: leather
+    entity: Leather

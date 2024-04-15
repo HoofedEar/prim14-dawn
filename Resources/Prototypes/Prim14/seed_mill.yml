@@ -1,0 +1,61 @@
+﻿- type: entity
+  id: SeedMill
+  name: seed mill
+  parent: SeedExtractor
+  suffix: Prim14
+  description: Extracts seeds from produce.
+  components:
+  - type: Sprite
+    sprite: Prim14/seed_mill.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+    - state: icon
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: SeedMillBuild
+    node: FinishedSeedMill
+  - type: ApcPowerReceiver
+    needsPower: false
+
+- type: constructionGraph
+  id: SeedMillBuild
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: FinishedSeedMill
+      steps:
+      - material: WoodPlank
+        amount: 5
+        doAfter: 4
+
+  - node: FinishedSeedMill
+    entity: SeedMill
+
+- type: construction
+  name: seed mill
+  id: SeedMillConstruct
+  graph: SeedMillBuild
+  startNode: start
+  targetNode: FinishedSeedMill
+  category: construction-category-prim14-structures
+  description: Used to extract seeds from produce.
+  icon: { sprite: Prim14/seed_mill.rsi, state: icon }
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

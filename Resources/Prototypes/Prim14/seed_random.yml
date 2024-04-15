@@ -1,0 +1,23 @@
+﻿- type: entity
+  id: PresentRandomSeedPrim14
+  name: random seed gift
+  description: Open for a random bag of seeds.
+  parent: [PresentBase, BaseItem]
+  suffix: Prim14
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: BerrySeeds
+      orGroup: GiftPool
+    - id: OrangeSeeds
+      orGroup: GiftPool
+    - id: PotatoSeeds
+      orGroup: GiftPool
+    - id: TomatoSeeds
+      orGroup: GiftPool
+    - id: AppleSeeds
+      orGroup: GiftPool
+    - id: CornSeeds
+      orGroup: GiftPool
+    sound:
+      path: /Audio/Effects/unwrap.ogg

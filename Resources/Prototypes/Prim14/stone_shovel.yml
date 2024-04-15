@@ -1,0 +1,60 @@
+﻿- type: entity
+  parent: HydroponicsToolSpade
+  id: StoneToolShovel
+  name: stone shovel
+  description: A stone tool for digging and moving dirt.
+  suffix: Prim14
+  components:
+  - type: Sprite
+    sprite: Prim14/stone_shovel.rsi
+    state: icon
+  - type: Item
+    sprite: Prim14/stone_shovel.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: 45
+    damage:
+      types:
+        Blunt: 5
+        Piercing: 1 # I guess you can stab it into them?
+  - type: Construction
+    graph: StoneShovel
+    node: finishedShovel
+  - type: Tool
+    qualities:
+    - Digging
+    useSound:
+      collection: ShovelDig
+
+- type: constructionGraph
+  id: StoneShovel
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: finishedShovel
+      steps:
+      - material: WoodStick
+        amount: 2
+        doAfter: 2
+      - material: Stone
+        amount: 4
+        doAfter: 4
+
+  - node: finishedShovel
+    entity: StoneToolShovel
+
+- type: construction
+  name: stone shovel
+  id: StoneShovel
+  graph: StoneShovel
+  startNode: start
+  targetNode: finishedShovel
+  category: construction-category-prim14-tools
+  description: Handy for digging holes.
+  icon: { sprite: Prim14/stone_shovel.rsi, state: icon }
+  objectType: Item
+
+- type: soundCollection
+  id: ShovelDig
+  files:
+  - /Audio/Items/shovel_dig.ogg
