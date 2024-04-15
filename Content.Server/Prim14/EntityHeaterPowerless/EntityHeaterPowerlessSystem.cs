@@ -16,7 +16,7 @@ public sealed class EntityHeaterPowerlessSystem: EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<EntityHeaterPowerlessComponent, StartCollideEvent>(OnStartCollide);
+        // SubscribeLocalEvent<EntityHeaterPowerlessComponent, StartCollideEvent>(OnStartCollide);
     }
 
     public override void Update(float deltaTime)
@@ -35,16 +35,16 @@ public sealed class EntityHeaterPowerlessSystem: EntitySystem
         }
     }
 
-    private void OnStartCollide(EntityUid uid, EntityHeaterPowerlessComponent comp, ref StartCollideEvent args)
-    {
-        var otherUid = args.OtherEntity;
-
-        if (TryComp<FlammableComponent>(otherUid, out var flammable))
-        {
-            // Apply the fury of a thousand suns
-            var multiplier = flammable.FireStacks == 0f ? 5f : 1f;
-            _flammable.AdjustFireStacks(otherUid, 0.50f * multiplier, flammable);
-            _flammable.Ignite(otherUid, uid, flammable);
-        }
-    }
+    // private void OnStartCollide(EntityUid uid, EntityHeaterPowerlessComponent comp, ref StartCollideEvent args)
+    // {
+    //     var otherUid = args.OtherEntity;
+    //
+    //     if (TryComp<FlammableComponent>(otherUid, out var flammable))
+    //     {
+    //         // Apply the fury of a thousand suns
+    //         var multiplier = flammable.FireStacks == 0f ? 5f : 1f;
+    //         _flammable.AdjustFireStacks(otherUid, 0.50f * multiplier, flammable);
+    //         _flammable.Ignite(otherUid, uid, flammable);
+    //     }
+    // }
 }

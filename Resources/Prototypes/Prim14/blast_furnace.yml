@@ -12,13 +12,10 @@
       shader: unshaded
       map: ["enum.LatheVisualLayers.IsRunning"]
     - state: blast_furnace
-      shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
     - state: blast_furnace
-      shader: unshaded
       map: ["enum.MaterialStorageVisualLayers.Inserting"]
     - state: blast_furnace
-      shader: unshaded
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Destructible
     thresholds:
