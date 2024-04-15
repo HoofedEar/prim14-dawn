@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.FixedPoint;
 using Content.Shared.Fluids.Components;
@@ -45,14 +46,18 @@ public sealed partial class PuddleSystem
             if (!_solutionContainerSystem.ResolveSolution(uid, puddle.SolutionName, ref puddle.Solution, out var puddleSolution))
                 continue;
 
+            // Capture if this puddle contained only water
+            var reagentPrototypes = puddleSolution.GetReagentPrototypes(_prototypeManager);
+            var onlyWater = reagentPrototypes.Count == 1 && reagentPrototypes.Keys.First().ID == "Water";
+
             var reagentTick = evaporation.EvaporationAmount * EvaporationCooldown.TotalSeconds;
             puddleSolution.SplitSolutionWithOnly(reagentTick, EvaporationReagents);
 
             // Despawn if we're done
             if (puddleSolution.Volume == FixedPoint2.Zero)
             {
-                // Spawn a *sparkle*
-                Spawn("PuddleSparkle", xformQuery.GetComponent(uid).Coordinates);
+                if (onlyWater)
+                    Spawn("PuddleSparkle", xformQuery.GetComponent(uid).Coordinates);
                 QueueDel(uid);
             }
         }
