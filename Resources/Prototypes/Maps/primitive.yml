@@ -1,7 +1,7 @@
 ﻿- type: gameMap
   id: Primitive
   mapName: Primitive
-  mapPath: /Maps/Prim14/portal.yml
+  mapPath: /Maps/Prim14/biomemap.yml
   minPlayers: 0
   maxPlayers: 30
   stations:
