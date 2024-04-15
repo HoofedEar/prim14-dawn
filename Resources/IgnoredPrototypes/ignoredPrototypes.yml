@@ -7,3 +7,33 @@
 # - /Prototypes/Guidebook
 # - /Prototypes/Catalog/uplink_catalog.yml
 - /Prototypes/GameRules/events.yml
+- /Maps/Dungeon
+- /Maps/Misc
+- /Maps/Nonstations
+- /Maps/Ruins
+- /Maps/Salvage
+- /Maps/Shuttles
+- /Prototypes/Guidebook
+- /Prototypes/Recipes/Construction/clothing.yml
+- /Prototypes/Recipes/Construction/fun.yml
+- /Prototypes/Recipes/Construction/furniture.yml
+- /Prototypes/Recipes/Construction/lighting.yml
+- /Prototypes/Recipes/Construction/machines.yml
+- /Prototypes/Recipes/Construction/materials.yml
+- /Prototypes/Recipes/Construction/modular.yml
+- /Prototypes/Recipes/Construction/storage.yml
+- /Prototypes/Recipes/Construction/structures.yml
+- /Prototypes/Recipes/Construction/tools.yml
+- /Prototypes/Recipes/Construction/utilities.yml
+- /Prototypes/Recipes/Construction/weapons.yml
+- /Prototypes/Recipes/Construction/webs.yml
+- /Prototypes/Recipes/Crafting/artifact.yml
+- /Prototypes/Recipes/Crafting/bots.yml
+- /Prototypes/Recipes/Crafting/crates.yml
+- /Prototypes/Recipes/Crafting/improvised.yml
+- /Prototypes/Recipes/Crafting/potato.yml
+- /Prototypes/Recipes/Crafting/smokeables.yml
+- /Prototypes/Recipes/Crafting/tallbox.yml
+- /Prototypes/Recipes/Crafting/tiles.yml
+- /Prototypes/Recipes/Crafting/toys.yml
+- /Prototypes/Recipes/Crafting/web.yml

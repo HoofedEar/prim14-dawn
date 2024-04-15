@@ -76,7 +76,7 @@ entities:
           version: 6
         0,1:
           ind: 0,1
-          tiles: AQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAfgAAAAAAfQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAegAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfgAAAAAAegAAAAAAfgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfgAAAAAATwAAAAAAfgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          tiles: AQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAfgAAAAAAfQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAegAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAfgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
           version: 6
         1,0:
           ind: 1,0
@@ -210,47 +210,47 @@ entities:
             color: '#FFFFFFFF'
             id: Bushg1
           decals:
-            243: 1.0425935,13.454458
-            244: -3.9388828,8.015547
-            245: -0.9655762,9.828047
-            246: -9.120684,3.9187975
+            225: 1.0425935,13.454458
+            226: -3.9388828,8.015547
+            227: -0.9655762,9.828047
+            228: -9.120684,3.9187975
         - node:
             color: '#FFFFFFFF'
             id: Bushg2
           decals:
-            194: 6.786438,7.8089514
-            255: 7.773617,-1.1403377
+            176: 6.786438,7.8089514
+            237: 7.773617,-1.1403377
         - node:
             color: '#FFFFFFFF'
             id: Bushg3
           decals:
-            195: 5.270813,8.137076
-            247: -12.660719,-1.5925243
-            248: -15.129469,2.8168685
-            249: -5.4947243,-3.0737543
-            250: -8.557224,-2.2768793
-            251: 2.8024182,-4.749713
-            252: 4.568043,-1.8434627
-            253: 3.2399182,-0.3590877
+            177: 5.270813,8.137076
+            229: -12.660719,-1.5925243
+            230: -15.129469,2.8168685
+            231: -5.4947243,-3.0737543
+            232: -8.557224,-2.2768793
+            233: 2.8024182,-4.749713
+            234: 4.568043,-1.8434627
+            235: 3.2399182,-0.3590877
         - node:
             color: '#FFFFFFFF'
             id: Bushg4
           decals:
-            196: 3.8662882,13.194539
-            197: 4.694413,13.850789
-            198: 6.678788,15.460164
-            199: 11.362745,9.916464
-            200: 12.003777,9.916464
-            254: 3.5680432,-0.7497127
+            178: 3.8662882,13.194539
+            179: 4.694413,13.850789
+            180: 6.678788,15.460164
+            181: 11.362745,9.916464
+            182: 12.003777,9.916464
+            236: 3.5680432,-0.7497127
         - node:
             color: '#FFFFFFFF'
             id: Bushh2
           decals:
-            238: -1.9649141,12.815319
-            239: -3.105539,11.815319
-            240: 1.7300935,13.891958
-            241: 2.6519685,14.110708
-            242: 1.9644685,16.313833
+            220: -1.9649141,12.815319
+            221: -3.105539,11.815319
+            222: 1.7300935,13.891958
+            223: 2.6519685,14.110708
+            224: 1.9644685,16.313833
         - node:
             color: '#FFFFFFFF'
             id: Bushh3
@@ -259,8 +259,8 @@ entities:
             157: 4.282725,13.905232
             158: 3.6420999,11.827107
             159: 4.2046,11.639607
-            215: 14.507608,-4.762513
-            216: 13.913858,-4.668763
+            197: 14.507608,-4.762513
+            198: 13.913858,-4.668763
         - node:
             color: '#FFFFFFFF'
             id: Bushi1
@@ -294,33 +294,33 @@ entities:
             154: 4.8728266,14.051953
             155: 5.2634516,14.536328
             156: 5.6228266,14.817578
-            176: 1.4221497,2.0427797
-            177: 2.3752747,2.9490297
-            201: 11.894402,13.135214
-            202: 12.238152,12.416464
-            203: 12.206902,11.494589
-            204: 12.222527,10.713339
-            205: 12.081902,10.041464
-            217: 11.445108,1.9562368
-            218: 11.945108,1.4718617
-            219: 15.148233,-0.6843883
-            220: 16.101358,-1.8875133
-            221: 15.882608,-2.6062632
-            223: 3.1951084,-2.3562632
-            229: 1.9072759,15.18275
-            230: 1.2822759,13.924694
-            231: -1.0614741,13.065319
-            256: 6.6126175,-1.9997127
-            257: -1.7054513,-2.3352056
-            258: -1.2523263,-2.8508306
-            259: -6.8794537,-2.5227056
-            260: -6.6138287,-2.8820806
-            267: -4.2974024,-6.0240736
-            268: 16.32223,-4.7740736
-            269: 16.975002,5.121779
-            270: 17.412502,4.934279
-            271: 17.568752,2.387404
-            272: 17.600002,1.840529
+            169: 1.4221497,2.0427797
+            170: 2.3752747,2.9490297
+            183: 11.894402,13.135214
+            184: 12.238152,12.416464
+            185: 12.206902,11.494589
+            186: 12.222527,10.713339
+            187: 12.081902,10.041464
+            199: 11.445108,1.9562368
+            200: 11.945108,1.4718617
+            201: 15.148233,-0.6843883
+            202: 16.101358,-1.8875133
+            203: 15.882608,-2.6062632
+            205: 3.1951084,-2.3562632
+            211: 1.9072759,15.18275
+            212: 1.2822759,13.924694
+            213: -1.0614741,13.065319
+            238: 6.6126175,-1.9997127
+            239: -1.7054513,-2.3352056
+            240: -1.2523263,-2.8508306
+            241: -6.8794537,-2.5227056
+            242: -6.6138287,-2.8820806
+            249: -4.2974024,-6.0240736
+            250: 16.32223,-4.7740736
+            251: 16.975002,5.121779
+            252: 17.412502,4.934279
+            253: 17.568752,2.387404
+            254: 17.600002,1.840529
         - node:
             color: '#FFFFFFFF'
             id: Bushi2
@@ -334,22 +334,22 @@ entities:
             120: -13.67287,5.1287284
             121: -12.98537,4.9412284
             122: -9.92287,4.9724784
-            164: 5.0780945,4.7353134
-            167: 8.4374695,4.2665634
-            179: 3.7190247,3.0271547
-            181: 5.1170187,5.627704
-            186: 7.145813,7.2152014
-            232: -1.6864741,12.612194
-            233: -0.26459908,12.815319
-            234: 1.1600859,13.096569
-            235: 2.222586,14.315319
-            236: 2.972586,14.018444
-            261: -6.1138287,-2.4758306
-            262: -5.7700787,-2.6320806
-            263: -13.873318,3.544304
-            264: -0.81302714,-8.070949
-            265: -5.781777,-5.6490736
-            266: -5.141152,-5.8834486
+            160: 5.0780945,4.7353134
+            161: 8.4374695,4.2665634
+            171: 3.7190247,3.0271547
+            172: 5.1170187,5.627704
+            173: 7.145813,7.2152014
+            214: -1.6864741,12.612194
+            215: -0.26459908,12.815319
+            216: 1.1600859,13.096569
+            217: 2.222586,14.315319
+            218: 2.972586,14.018444
+            243: -6.1138287,-2.4758306
+            244: -5.7700787,-2.6320806
+            245: -13.873318,3.544304
+            246: -0.81302714,-8.070949
+            247: -5.781777,-5.6490736
+            248: -5.141152,-5.8834486
         - node:
             color: '#FFFFFFFF'
             id: Bushi3
@@ -358,40 +358,40 @@ entities:
             133: -14.692861,-4.691392
             134: -13.864736,-4.988267
             135: -14.786611,-5.128892
-            168: 7.9370356,3.5199847
-            169: 7.4057856,2.3168597
-            170: 7.7339106,1.8637347
-            172: 1.5940247,2.4021547
-            173: 1.7658997,1.3240297
-            174: 2.4377747,0.5427797
-            175: 2.1096497,1.9334047
-            188: 5.114563,7.4495764
-            191: 5.364563,6.4964514
-            273: 17.735825,5.121779
-            274: 16.892075,4.528029
-            275: 16.735825,3.184279
-            276: 17.423325,2.199904
-            277: 17.4077,1.246779
+            162: 7.9370356,3.5199847
+            163: 7.4057856,2.3168597
+            164: 7.7339106,1.8637347
+            165: 1.5940247,2.4021547
+            166: 1.7658997,1.3240297
+            167: 2.4377747,0.5427797
+            168: 2.1096497,1.9334047
+            174: 5.114563,7.4495764
+            175: 5.364563,6.4964514
+            255: 17.735825,5.121779
+            256: 16.892075,4.528029
+            257: 16.735825,3.184279
+            258: 17.423325,2.199904
+            259: 17.4077,1.246779
         - node:
             color: '#FFFFFFFF'
             id: Bushi4
           decals:
-            206: 12.160027,12.994589
-            207: 12.128777,11.307089
-            208: 12.191277,10.228964
-            209: 14.132608,-4.481263
-            210: 12.429483,-4.934388
-            211: 13.226358,-5.043763
-            212: 13.929483,-4.903138
-            213: 14.398233,-4.403138
-            214: 13.116983,-4.746888
-            222: 16.054483,-3.0437632
-            224: 14.913858,-3.1218882
-            225: 14.413858,-3.2625132
-            226: 15.601358,-1.1843883
-            227: 15.741983,-2.1218882
-            228: 14.616983,-3.8406382
-            237: -3.058664,11.909069
+            188: 12.160027,12.994589
+            189: 12.128777,11.307089
+            190: 12.191277,10.228964
+            191: 14.132608,-4.481263
+            192: 12.429483,-4.934388
+            193: 13.226358,-5.043763
+            194: 13.929483,-4.903138
+            195: 14.398233,-4.403138
+            196: 13.116983,-4.746888
+            204: 16.054483,-3.0437632
+            206: 14.913858,-3.1218882
+            207: 14.413858,-3.2625132
+            208: 15.601358,-1.1843883
+            209: 15.741983,-2.1218882
+            210: 14.616983,-3.8406382
+            219: -3.058664,11.909069
         - node:
             color: '#D4D4D428'
             id: CheckerNWSE
@@ -458,33 +458,33 @@ entities:
             color: '#FFFFFFFF'
             id: Flowerspv1
           decals:
-            341: 15.409076,-3.0439422
-            342: 11.989356,1.8435147
-            343: -0.9894809,2.0778897
-            344: -10.976232,4.0622644
-            345: -7.581792,-3.1927552
+            317: 15.409076,-3.0439422
+            318: 11.989356,1.8435147
+            319: -0.9894809,2.0778897
+            320: -10.976232,4.0622644
+            321: -7.581792,-3.1927552
         - node:
             color: '#FFFFFFFF'
             id: Flowersy1
           decals:
-            331: 4.1971483,3.5802279
-            332: 7.891965,-1.4653698
-            333: -1.9038727,-3.0338266
-            334: -12.274541,3.1521008
-            335: -15.071416,1.3396008
+            307: 4.1971483,3.5802279
+            308: 7.891965,-1.4653698
+            309: -1.9038727,-3.0338266
+            310: -12.274541,3.1521008
+            311: -15.071416,1.3396008
         - node:
             color: '#FFFFFFFF'
             id: Flowersy2
           decals:
-            340: 1.9234757,13.784837
+            316: 1.9234757,13.784837
         - node:
             color: '#FFFFFFFF'
             id: Flowersy4
           decals:
-            336: -12.102666,-1.8426917
-            337: -6.2924128,3.6663656
-            338: 7.6873007,5.9392967
-            339: 8.47246,15.237962
+            312: -12.102666,-1.8426917
+            313: -6.2924128,3.6663656
+            314: 7.6873007,5.9392967
+            315: 8.47246,15.237962
         - node:
             color: '#EFB34196'
             id: FullTileOverlayGreyscale
@@ -497,113 +497,113 @@ entities:
             color: '#FFFFFFFF'
             id: Grassd1
           decals:
-            289: -1.2084467,2.1307087
-            318: -7.174666,3.7034779
-            319: -6.1088743,3.5003529
-            320: 8.4987955,14.040682
-            321: 6.8112955,15.056307
-            322: 1.8420663,13.317229
-            323: 1.1049769,13.926604
-            329: 4.0408983,12.472019
-            330: 4.1658983,13.364023
+            269: -1.2084467,2.1307087
+            294: -7.174666,3.7034779
+            295: -6.1088743,3.5003529
+            296: 8.4987955,14.040682
+            297: 6.8112955,15.056307
+            298: 1.8420663,13.317229
+            299: 1.1049769,13.926604
+            305: 4.0408983,12.472019
+            306: 4.1658983,13.364023
         - node:
             color: '#FFFFFFFF'
             id: Grassd2
           decals:
-            307: -10.267387,3.498789
-            308: -12.825613,3.5300388
-            309: -11.841238,3.467539
-            310: -15.212104,2.0703545
-            311: -14.462104,1.3047295
-            312: -14.805854,0.85160446
-            346: -8.170633,-3.0193841
-            347: -3.5826275,-3.4100091
-            348: 4.9997683,-7.9881344
-            363: 2.3350472,-4.8421154
-            364: 0.83504725,-4.2639904
-            365: -0.14932775,-3.3108656
-            366: 12.386564,-4.2966237
-            367: 14.183439,-4.1091237
-            368: 14.199064,-4.8434987
-            369: 14.933439,-3.7028737
-            376: 8.424761,8.91268
-            377: 8.331011,8.31893
-            378: 11.284136,7.2095547
-            379: 0.9451935,2.8081126
-            380: 1.7108185,2.7299876
-            381: 7.27232,-0.9347882
-            382: 6.87054,1.3464618
-            383: 6.62054,0.9558368
-            384: 6.167415,-0.12228823
-            385: 6.667415,-0.10666323
+            283: -10.267387,3.498789
+            284: -12.825613,3.5300388
+            285: -11.841238,3.467539
+            286: -15.212104,2.0703545
+            287: -14.462104,1.3047295
+            288: -14.805854,0.85160446
+            322: -8.170633,-3.0193841
+            323: -3.5826275,-3.4100091
+            324: 4.9997683,-7.9881344
+            339: 2.3350472,-4.8421154
+            340: 0.83504725,-4.2639904
+            341: -0.14932775,-3.3108656
+            342: 12.386564,-4.2966237
+            343: 14.183439,-4.1091237
+            344: 14.199064,-4.8434987
+            345: 14.933439,-3.7028737
+            352: 8.424761,8.91268
+            353: 8.331011,8.31893
+            354: 11.284136,7.2095547
+            355: 0.9451935,2.8081126
+            356: 1.7108185,2.7299876
+            357: 7.27232,-0.9347882
+            358: 6.87054,1.3464618
+            359: 6.62054,0.9558368
+            360: 6.167415,-0.12228823
+            361: 6.667415,-0.10666323
         - node:
             color: '#FFFFFFFF'
             id: Grassd3
           decals:
-            284: -4.3266773,0.2713337
-            285: -4.3110523,-1.2755413
-            287: -3.6771967,0.7869587
-            288: -3.6146967,-1.0567913
-            324: 1.1601887,9.480584
-            325: 1.3320637,11.277459
-            326: 8.603398,9.937865
-            327: 4.9471483,9.768894
-            328: 5.4002733,8.893894
-            353: 6.8122683,-7.7850094
-            354: 2.8122683,-8.097509
-            355: 4.2653933,-7.8943844
-            356: 5.6872683,-8.019384
-            357: 2.3350472,-5.7483654
-            358: 1.0694222,-6.1702404
-            359: 5.8975472,-4.9514904
-            360: 3.8819222,-5.2952404
-            361: 5.1475472,-5.8421154
-            362: 4.3819222,-5.5139904
+            265: -4.3266773,0.2713337
+            266: -4.3110523,-1.2755413
+            267: -3.6771967,0.7869587
+            268: -3.6146967,-1.0567913
+            300: 1.1601887,9.480584
+            301: 1.3320637,11.277459
+            302: 8.603398,9.937865
+            303: 4.9471483,9.768894
+            304: 5.4002733,8.893894
+            329: 6.8122683,-7.7850094
+            330: 2.8122683,-8.097509
+            331: 4.2653933,-7.8943844
+            332: 5.6872683,-8.019384
+            333: 2.3350472,-5.7483654
+            334: 1.0694222,-6.1702404
+            335: 5.8975472,-4.9514904
+            336: 3.8819222,-5.2952404
+            337: 5.1475472,-5.8421154
+            338: 4.3819222,-5.5139904
         - node:
             color: '#FFFFFFFF'
             id: Grasse1
           decals:
-            278: -4.930035,4.0876164
-            279: -4.16441,3.1032414
-            280: -4.1548023,1.5213337
-            281: -2.8891776,0.5838337
-            282: -3.1079276,-1.2911663
-            301: -4.9905453,3.391439
-            302: -5.0530453,3.828939
-            303: -4.0218353,2.8414009
-            304: -9.751762,3.6550388
-            305: -10.861137,3.7644138
-            306: -11.048637,3.7956638
-            349: 6.2966433,-7.8006344
-            350: 9.952893,-8.066259
-            351: 9.999768,-6.3162594
-            352: 7.5622683,-7.9725094
-            370: 14.524912,-0.5153738
-            371: 12.390148,0.8318199
-            372: 12.997651,2.2864077
-            373: 8.596432,5.229127
-            374: 7.9245567,4.619752
-            375: 7.752886,5.4439297
+            260: -4.930035,4.0876164
+            261: -4.16441,3.1032414
+            262: -4.1548023,1.5213337
+            263: -2.8891776,0.5838337
+            264: -3.1079276,-1.2911663
+            277: -4.9905453,3.391439
+            278: -5.0530453,3.828939
+            279: -4.0218353,2.8414009
+            280: -9.751762,3.6550388
+            281: -10.861137,3.7644138
+            282: -11.048637,3.7956638
+            325: 6.2966433,-7.8006344
+            326: 9.952893,-8.066259
+            327: 9.999768,-6.3162594
+            328: 7.5622683,-7.9725094
+            346: 14.524912,-0.5153738
+            347: 12.390148,0.8318199
+            348: 12.997651,2.2864077
+            349: 8.596432,5.229127
+            350: 7.9245567,4.619752
+            351: 7.752886,5.4439297
         - node:
             color: '#FFFFFFFF'
             id: Grasse2
           decals:
-            294: 2.1031337,2.2938864
-            295: 2.6343837,3.3251364
-            296: 3.7125087,4.043886
-            297: 4.313461,4.368926
-            298: 4.938461,4.337676
-            299: 5.219711,4.837676
-            300: 4.907211,5.275176
+            270: 2.1031337,2.2938864
+            271: 2.6343837,3.3251364
+            272: 3.7125087,4.043886
+            273: 4.313461,4.368926
+            274: 4.938461,4.337676
+            275: 5.219711,4.837676
+            276: 4.907211,5.275176
         - node:
             color: '#FFFFFFFF'
             id: Grasse3
           decals:
-            313: -14.587104,2.3516045
-            314: -13.805854,1.4609795
-            315: -13.321479,3.1797295
-            316: -13.142202,-1.915928
-            317: -9.678143,-2.275303
+            289: -14.587104,2.3516045
+            290: -13.805854,1.4609795
+            291: -13.321479,3.1797295
+            292: -13.142202,-1.915928
+            293: -9.678143,-2.275303
         - node:
             color: '#334E6DC8'
             id: HalfTileOverlayGreyscale
@@ -877,9 +877,9 @@ entities:
           0,4:
             0: 143
           1,4:
-            0: 52479
+            0: 255
           2,4:
-            0: 4607
+            0: 255
           3,4:
             0: 1
           4,0:
@@ -1041,14 +1041,6 @@ entities:
       linkedPorts:
         1244:
         - DoorStatus: DoorBolt
-- proto: AirlockGlassShuttle
-  entities:
-  - uid: 215
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 7.5,19.5
-      parent: 407
 - proto: APCBasic
   entities:
   - uid: 388
@@ -1062,11 +1054,6 @@ entities:
     - type: Transform
       pos: -18.5,5.5
       parent: 407
-  - uid: 399
-    components:
-    - type: Transform
-      pos: 9.5,17.5
-      parent: 407
   - uid: 400
     components:
     - type: Transform
@@ -1074,11 +1061,6 @@ entities:
       parent: 407
 - proto: AtmosDeviceFanTiny
   entities:
-  - uid: 211
-    components:
-    - type: Transform
-      pos: 7.5,19.5
-      parent: 407
   - uid: 212
     components:
     - type: Transform
@@ -1129,6 +1111,21 @@ entities:
       parent: 407
 - proto: CableApcExtension
   entities:
+  - uid: 225
+    components:
+    - type: Transform
+      pos: 7.5,17.5
+      parent: 407
+  - uid: 226
+    components:
+    - type: Transform
+      pos: 9.5,17.5
+      parent: 407
+  - uid: 236
+    components:
+    - type: Transform
+      pos: 8.5,17.5
+      parent: 407
   - uid: 248
     components:
     - type: Transform
@@ -4708,6 +4705,31 @@ entities:
       parent: 407
 - proto: CableMV
   entities:
+  - uid: 174
+    components:
+    - type: Transform
+      pos: 4.5,17.5
+      parent: 407
+  - uid: 205
+    components:
+    - type: Transform
+      pos: 9.5,17.5
+      parent: 407
+  - uid: 206
+    components:
+    - type: Transform
+      pos: 6.5,17.5
+      parent: 407
+  - uid: 211
+    components:
+    - type: Transform
+      pos: 5.5,17.5
+      parent: 407
+  - uid: 215
+    components:
+    - type: Transform
+      pos: 8.5,17.5
+      parent: 407
   - uid: 398
     components:
     - type: Transform
@@ -5312,6 +5334,16 @@ entities:
     components:
     - type: Transform
       pos: -19.5,-3.5
+      parent: 407
+  - uid: 1112
+    components:
+    - type: Transform
+      pos: 7.5,16.5
+      parent: 407
+  - uid: 1260
+    components:
+    - type: Transform
+      pos: 7.5,17.5
       parent: 407
   - uid: 1361
     components:
@@ -7073,11 +7105,6 @@ entities:
     - type: Transform
       pos: 9.476239,11.251854
       parent: 407
-  - uid: 1739
-    components:
-    - type: Transform
-      pos: 7.0499725,16.56564
-      parent: 407
 - proto: FloraTree01
   entities:
   - uid: 1044
@@ -7227,6 +7254,11 @@ entities:
     - type: Transform
       pos: 2.6465611,8.660933
       parent: 407
+  - uid: 399
+    components:
+    - type: Transform
+      pos: 7.5305057,16.309566
+      parent: 407
   - uid: 409
     components:
     - type: Transform
@@ -7317,11 +7349,6 @@ entities:
     - type: Transform
       pos: 8.631456,-5.5788436
       parent: 407
-  - uid: 1730
-    components:
-    - type: Transform
-      pos: 9.559828,16.19064
-      parent: 407
   - uid: 1735
     components:
     - type: Transform
@@ -7384,11 +7411,6 @@ entities:
     - type: Transform
       pos: 1.0840611,8.739058
       parent: 407
-  - uid: 1039
-    components:
-    - type: Transform
-      pos: 4.889841,16.044064
-      parent: 407
   - uid: 1060
     components:
     - type: Transform
@@ -7434,22 +7456,12 @@ entities:
     - type: Transform
       pos: 1.0157788,3.2502027
       parent: 407
-  - uid: 1733
-    components:
-    - type: Transform
-      pos: 6.3723273,16.237514
-      parent: 407
 - proto: FloraTree04
   entities:
   - uid: 94
     components:
     - type: Transform
       pos: -4.443815,7.6647525
-      parent: 407
-  - uid: 174
-    components:
-    - type: Transform
-      pos: 3.5904129,16.537964
       parent: 407
   - uid: 189
     components:
@@ -7460,6 +7472,11 @@ entities:
     components:
     - type: Transform
       pos: -1.5346489,10.995854
+      parent: 407
+  - uid: 222
+    components:
+    - type: Transform
+      pos: 9.218006,16.418941
       parent: 407
   - uid: 233
     components:
@@ -7620,6 +7637,11 @@ entities:
       parent: 407
 - proto: FloraTree06
   entities:
+  - uid: 53
+    components:
+    - type: Transform
+      pos: 6.3430057,16.090816
+      parent: 407
   - uid: 392
     components:
     - type: Transform
@@ -7649,11 +7671,6 @@ entities:
     components:
     - type: Transform
       pos: 2.5157788,4.9064527
-      parent: 407
-  - uid: 1732
-    components:
-    - type: Transform
-      pos: 7.7942023,16.268764
       parent: 407
 - proto: FoodBerries
   entities:
@@ -9220,26 +9237,6 @@ entities:
     - type: Transform
       pos: -30.5,-1.5
       parent: 407
-  - uid: 222
-    components:
-    - type: Transform
-      pos: 6.5,18.5
-      parent: 407
-  - uid: 226
-    components:
-    - type: Transform
-      pos: 8.5,18.5
-      parent: 407
-  - uid: 235
-    components:
-    - type: Transform
-      pos: 6.5,19.5
-      parent: 407
-  - uid: 236
-    components:
-    - type: Transform
-      pos: 8.5,19.5
-      parent: 407
   - uid: 1045
     components:
     - type: Transform
@@ -10006,11 +10003,6 @@ entities:
     - type: Transform
       pos: -16.5,7.5
       parent: 407
-  - uid: 225
-    components:
-    - type: Transform
-      pos: 8.5,19.5
-      parent: 407
   - uid: 325
     components:
     - type: Transform
@@ -10110,21 +10102,6 @@ entities:
     components:
     - type: Transform
       pos: -24.5,2.5
-      parent: 407
-  - uid: 1032
-    components:
-    - type: Transform
-      pos: 8.5,18.5
-      parent: 407
-  - uid: 1112
-    components:
-    - type: Transform
-      pos: 6.5,18.5
-      parent: 407
-  - uid: 1260
-    components:
-    - type: Transform
-      pos: 6.5,19.5
       parent: 407
 - proto: SignalButton
   entities:
@@ -10575,11 +10552,6 @@ entities:
     - type: Transform
       pos: 20.5,0.5
       parent: 407
-  - uid: 53
-    components:
-    - type: Transform
-      pos: 7.5,17.5
-      parent: 407
   - uid: 56
     components:
     - type: Transform
@@ -10915,16 +10887,6 @@ entities:
     - type: Transform
       pos: 16.5,-5.5
       parent: 407
-  - uid: 205
-    components:
-    - type: Transform
-      pos: 6.5,17.5
-      parent: 407
-  - uid: 206
-    components:
-    - type: Transform
-      pos: 8.5,17.5
-      parent: 407
   - uid: 207
     components:
     - type: Transform
@@ -10989,6 +10951,11 @@ entities:
     components:
     - type: Transform
       pos: -2.5,-8.5
+      parent: 407
+  - uid: 235
+    components:
+    - type: Transform
+      pos: 7.5,17.5
       parent: 407
   - uid: 281
     components:
@@ -11145,10 +11112,20 @@ entities:
     - type: Transform
       pos: -1.5,-8.5
       parent: 407
+  - uid: 1032
+    components:
+    - type: Transform
+      pos: 6.5,17.5
+      parent: 407
   - uid: 1037
     components:
     - type: Transform
       pos: -1.5,17.5
+      parent: 407
+  - uid: 1039
+    components:
+    - type: Transform
+      pos: 8.5,17.5
       parent: 407
   - uid: 1101
     components:

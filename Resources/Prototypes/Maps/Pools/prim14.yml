@@ -1,0 +1,5 @@
+﻿- type: gameMapPool
+  id: Prim14MapPool
+  maps:
+  - Primitive
+  #- Train <- return after station anchoring PR is finished and merged
