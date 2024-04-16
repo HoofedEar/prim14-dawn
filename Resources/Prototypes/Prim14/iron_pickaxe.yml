@@ -1,0 +1,39 @@
+﻿- type: entity
+  id: IronPickaxe
+  parent: Pickaxe
+  name: iron pickaxe
+  suffix: Prim14
+  components:
+  - type: Construction
+    graph: IronPickaxe
+    node: finishedAxe
+
+- type: constructionGraph
+  id: IronPickaxe
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: finishedAxe
+      steps:
+      - material: WoodStick
+        amount: 2
+        doAfter: 2
+      - material: Iron
+        amount: 4
+        doAfter: 6
+
+  - node: finishedAxe
+    entity: IronPickaxe
+
+- type: construction
+  name: iron pickaxe
+  id: IronPickaxe
+  graph: IronPickaxe
+  startNode: start
+  targetNode: finishedAxe
+  category: construction-category-prim14-tools
+  description: Notched to perfection!
+  icon: { sprite: Objects/Weapons/Melee/pickaxe.rsi, state: pickaxe }
+  objectType: Item
+

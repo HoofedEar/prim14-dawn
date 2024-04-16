@@ -1,0 +1,66 @@
+﻿- type: entity
+  id: BonePickaxe
+  parent: Pickaxe
+  name: bone pickaxe
+  description: Makeshift pickaxe made from bone
+  suffix: Prim14
+  components:
+  - type: Sprite
+    sprite: Prim14/bone_pickaxe.rsi
+    state: pickaxe
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,0
+    - 1,1,1,2
+    sprite: Prim14/bone_pickaxe.rsi
+    storedRotation: -45
+  - type: MeleeWeapon
+    attackRate: 0.7
+    wideAnimationRotation: -135
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+      params:
+        volume: -3
+    damage:
+      groups:
+        Brute: 3
+  - type: IncreaseDamageOnWield
+    damage:
+      groups:
+        Brute: 6
+      types:
+        Structural: 15
+  - type: Construction
+    graph: BonePickaxe
+    node: finishedAxe
+
+- type: constructionGraph
+  id: BonePickaxe
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: finishedAxe
+      steps:
+      - material: WoodStick
+        amount: 2
+        doAfter: 2
+      - material: Bones
+        amount: 4
+        doAfter: 4
+
+  - node: finishedAxe
+    entity: BonePickaxe
+
+- type: construction
+  name: bone pickaxe
+  id: BonePickaxe
+  graph: BonePickaxe
+  startNode: start
+  targetNode: finishedAxe
+  category: construction-category-prim14-tools
+  description: Makeshift pickaxe made from bone
+  icon: { sprite: Prim14/bone_pickaxe.rsi, state: pickaxe }
+  objectType: Item
+
