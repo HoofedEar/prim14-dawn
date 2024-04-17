@@ -1,0 +1,27 @@
+﻿- type: entity
+  id: BushTintoberry
+  parent: BaseBush
+  components:
+  - type: Sprite
+    sprite: Prim14/berries.rsi
+    layers:
+    - state: tintobush_2
+      map: [ "enum.BushVisualLayers.Ready" ]
+    - state: tintobush_1
+      map: [ "enum.BushVisualLayers.Empty" ]
+  - type: Bush
+    loot: FoodTintoberry
+  - type: BushVisuals
+    stateEmpty: tintobush_1
+    stateReady: tintobush_2
+
+- type: entity
+  id: FoodTintoberry
+  parent: BaseBerry
+  name: tintoberry
+  description: Delicious berries!
+  components:
+  - type: Sprite
+    sprite: Prim14/berries.rsi
+    state: tintoberry
+    scale: 0.8, 0.8

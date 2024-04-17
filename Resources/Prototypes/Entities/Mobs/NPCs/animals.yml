@@ -759,11 +759,11 @@
   - type: Butcherable
     spawned:
     - id: FoodMeat
-      amount: 5
+      amount: 2
     - id: MaterialBones1
       amount: 3
     - id: RawHide
-      amount: 1
+      amount: 2
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent

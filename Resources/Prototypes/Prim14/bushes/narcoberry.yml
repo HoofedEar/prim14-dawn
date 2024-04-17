@@ -1,0 +1,27 @@
+﻿- type: entity
+  id: BushNarcoberry
+  parent: BaseBush
+  components:
+  - type: Sprite
+    sprite: Prim14/berries.rsi
+    layers:
+    - state: narcobush_2
+      map: [ "enum.BushVisualLayers.Ready" ]
+    - state: narcobush_1
+      map: [ "enum.BushVisualLayers.Empty" ]
+  - type: Bush
+    loot: FoodNarcoberry
+  - type: BushVisuals
+    stateEmpty: narcobush_1
+    stateReady: narcobush_2
+
+- type: entity
+  id: FoodNarcoberry
+  parent: BaseBerry
+  name: narcoberry
+  description: Dangerous berries!
+  components:
+  - type: Sprite
+    sprite: Prim14/berries.rsi
+    state: narcoberry
+    scale: 0.8, 0.8

@@ -5,6 +5,18 @@
   suffix: Prim14
   description: A torch fashioned from some wood.
   components:
+  - type: Sprite
+    sprite: Objects/Misc/torch.rsi
+    layers:
+    - map: [ enum.ExpendableLightVisualLayers.Base ]
+      state: torch_unlit
+    - map: [ enum.ExpendableLightVisualLayers.Overlay ]
+      state: torch_spent
+    - map: [ enum.ExpendableLightVisualLayers.Glow ]
+      state: lit_overlay
+      color: "#FFFFFF"
+      visible: false
+      shader: unshaded
   - type: PointLight
     enabled: false
     color: "#FFC90C"

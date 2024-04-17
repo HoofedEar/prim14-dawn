@@ -15,3 +15,6 @@ construction-category-prim14-misc = Misc
 # Tools
 tool-quality-digging-name = Digging
 tool-quality-digging-tool-name = Shovel
+
+# Bushes
+bushes-interact-no-berries = You don't find any berries on the bush.
