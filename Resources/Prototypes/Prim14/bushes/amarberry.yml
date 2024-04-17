@@ -1,0 +1,9 @@
+﻿- type: entity
+  id: BushAmarberry
+  parent: BaseBush
+
+- type: entity
+  id: FoodAmarberry
+  parent: BaseBerry
+  name: amarberry
+  description: Delicious berries!

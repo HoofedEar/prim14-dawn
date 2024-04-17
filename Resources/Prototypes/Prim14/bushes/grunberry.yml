@@ -1,0 +1,27 @@
+﻿- type: entity
+  id: BushGrunberry
+  parent: BaseBush
+  components:
+  - type: Sprite
+    sprite: Prim14/berries.rsi
+    layers:
+    - state: grunbush_2
+      map: [ "enum.BushVisualLayers.Ready" ]
+    - state: grunbush_1
+      map: [ "enum.BushVisualLayers.Empty" ]
+  - type: Bush
+    loot: FoodGrunberry
+  - type: BushVisuals
+    stateEmpty: grunbush_1
+    stateReady: grunbush_2
+
+- type: entity
+  id: FoodGrunberry
+  parent: BaseBerry
+  name: grunberry
+  description: Delicious berry!
+  components:
+  - type: Sprite
+    sprite: Prim14/berries.rsi
+    state: grunberry
+    scale: 0.8, 0.8

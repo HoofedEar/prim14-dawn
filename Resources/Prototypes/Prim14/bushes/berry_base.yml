@@ -1,0 +1,27 @@
+﻿- type: entity
+  id: BaseBerry
+  parent: BaseItem
+  name: BaseBerry
+  abstract: true
+  suffix: Prim14
+  description: yummy!
+  components:
+  - type: Sprite
+    sprite: Prim14/berries.rsi
+    state: amarberry
+    scale: 0.8, 0.8
+  - type: Food
+  - type: FlavorProfile
+    flavors:
+    - berry
+  - type: Item
+    size: Tiny
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 3
+        - ReagentId: Vitamin
+          Quantity: 2
