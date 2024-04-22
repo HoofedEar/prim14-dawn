@@ -171,5 +171,8 @@
   alias:
   - survival-prim14
   name: survival-title
-  showInVote: false # secret
+  showInVote: false
   description: survival-description
+  supportedMaps: Prim14MapPool
+  rules:
+    - RespawnPrim14
