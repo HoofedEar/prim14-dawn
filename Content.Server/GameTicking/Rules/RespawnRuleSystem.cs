@@ -1,5 +1,8 @@
+using Content.Server.Administration.Commands;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking.Rules.Components;
+using Content.Server.KillTracking;
+using Content.Server.Mind;
 using Content.Server.Station.Systems;
 using Content.Shared.Chat;
 using Content.Shared.Interaction.Events;
@@ -23,6 +26,8 @@ public sealed class RespawnRuleSystem : GameRuleSystem<RespawnDeadRuleComponent>
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly StationSystem _station = default!;
+    [Dependency] private readonly MindSystem _mind = default!;
+    [Dependency] private readonly StationSpawningSystem _stationSpawning = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -31,6 +36,53 @@ public sealed class RespawnRuleSystem : GameRuleSystem<RespawnDeadRuleComponent>
 
         SubscribeLocalEvent<SuicideEvent>(OnSuicide);
         SubscribeLocalEvent<MobStateChangedEvent>(OnMobStateChanged);
+        SubscribeLocalEvent<PlayerBeforeSpawnEvent>(OnBeforeSpawn);
+        SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnSpawnComplete);
+    }
+
+    private void OnBeforeSpawn(PlayerBeforeSpawnEvent ev)
+    {
+        var query = EntityQueryEnumerator<RespawnTrackerComponent, GameRuleComponent>();
+        while (query.MoveNext(out var uid, out var tracker, out var rule))
+        {
+            if (!GameTicker.IsGameRuleActive(uid, rule))
+                continue;
+
+            // Check if the uid has DeathMatchRuleComponent and if so, skip this rule
+            if (EntityManager.TryGetComponent(uid, out DeathMatchRuleComponent? _))
+                continue;
+
+            var newMind = _mind.CreateMind(ev.Player.UserId, ev.Profile.Name);
+            _mind.SetUserId(newMind, ev.Player.UserId);
+
+            var mobMaybe = _stationSpawning.SpawnPlayerCharacterOnStation(ev.Station, null, ev.Profile);
+            DebugTools.AssertNotNull(mobMaybe);
+            var mob = mobMaybe!.Value;
+
+            _mind.TransferTo(newMind, mob);
+            SetOutfitCommand.SetOutfit(mob, "PassengerGear", EntityManager);
+            EnsureComp<KillTrackerComponent>(mob);
+            AddToTracker(ev.Player.UserId, uid, tracker);
+
+            ev.Handled = true;
+            break;
+        }
+    }
+
+    private void OnSpawnComplete(PlayerSpawnCompleteEvent ev)
+    {
+        var query = EntityQueryEnumerator<RespawnTrackerComponent, GameRuleComponent>();
+        while (query.MoveNext(out var uid, out var tracker, out var rule))
+        {
+            if (!GameTicker.IsGameRuleActive(uid, rule))
+                continue;
+
+            // Check if the uid has DeathMatchRuleComponent and if so, skip this rule
+            if (EntityManager.TryGetComponent(uid, out DeathMatchRuleComponent? _))
+                continue;
+
+            AddToTracker(ev.Mob, uid, tracker);
+        }
     }
 
     private void OnSuicide(SuicideEvent ev)
