@@ -7,3 +7,9 @@
   parent: BaseBerry
   name: amarberry
   description: Delicious berries!
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: EZNutrient
+        Quantity: 5

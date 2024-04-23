@@ -25,3 +25,8 @@
     sprite: Prim14/berries.rsi
     state: narcoberry
     scale: 0.8, 0.8
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: CarpoToxin
+        Quantity: 5

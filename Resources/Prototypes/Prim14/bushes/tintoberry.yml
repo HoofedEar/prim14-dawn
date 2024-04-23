@@ -25,3 +25,10 @@
     sprite: Prim14/berries.rsi
     state: tintoberry
     scale: 0.8, 0.8
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceBerry
+        Quantity: 4
+      - ReagentId: Sake
+        Quantity: 1

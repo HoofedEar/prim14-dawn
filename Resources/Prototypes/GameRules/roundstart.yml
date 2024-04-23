@@ -123,7 +123,7 @@
   - type: GameRule
   - type: RespawnDeadRule
   - type: RespawnTracker
-    respawnDelay: 600
+    respawnDelay: 300
 
 # event schedulers
 - type: entity
