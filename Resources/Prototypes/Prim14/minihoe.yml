@@ -1,0 +1,43 @@
+﻿- type: entity
+  name: stone rake
+  parent: HydroponicsToolMiniHoe
+  id: StoneToolRake
+  suffix: Prim14
+  components:
+  - type: Sprite
+    sprite: Prim14/hoe.rsi
+    state: icon
+  - type: Item
+    sprite: Prim14/hoe.rsi
+  - type: Construction
+    graph: StoneRake
+    node: finishedRake
+
+- type: constructionGraph
+  id: StoneRake
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: finishedRake
+      steps:
+      - material: WoodStick
+        amount: 2
+        doAfter: 2
+      - material: Stone
+        amount: 4
+        doAfter: 4
+
+  - node: finishedRake
+    entity: StoneToolRake
+
+- type: construction
+  name: stone rake
+  id: StoneRake
+  graph: StoneRake
+  startNode: start
+  targetNode: finishedRake
+  category: construction-category-prim14-tools
+  description: It's used for removing weeds or scratching your back.
+  icon: { sprite: Prim14/hoe.rsi, state: icon }
+  objectType: Item

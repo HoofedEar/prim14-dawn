@@ -25,3 +25,10 @@
     sprite: Prim14/berries.rsi
     state: grunberry
     scale: 0.8, 0.8
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceBerry
+        Quantity: 3
+      - ReagentId: Fiber
+        Quantity: 2

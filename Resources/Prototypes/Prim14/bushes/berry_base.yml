@@ -16,12 +16,3 @@
     - berry
   - type: Item
     size: Tiny
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 3
-        - ReagentId: Vitamin
-          Quantity: 2

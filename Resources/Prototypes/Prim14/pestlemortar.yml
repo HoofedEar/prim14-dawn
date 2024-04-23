@@ -1,0 +1,66 @@
+﻿- type: entity
+  name: pestle and mortar
+  parent: BaseItem
+  id: ToolPestleMortar
+  description: Useful for grinding things up.
+  suffix: Prim14
+  components:
+  - type: Sprite
+    sprite: Prim14/pestlemortar.rsi
+    state: icon
+  - type: Item
+    sprite: Prim14/pestlemortar.rsi
+    size: Small
+  - type: PestleMortar
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 10
+  - type: RefillableSolution
+    solution: drink
+  - type: DrainableSolution
+    solution: drink
+  - type: ExaminableSolution
+    solution: drink
+  - type: DrawableSolution
+    solution: drink
+  - type: SolutionTransfer
+    maxTransferAmount: 10
+    canChangeTransferAmount: true
+  - type: FitsInDispenser
+    solution: drink
+  - type: ContainerContainer
+    containers:
+      inputContainer: !type:Container
+  - type: Construction
+    graph: PestleMortar
+    node: finished
+
+- type: constructionGraph
+  id: PestleMortar
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: finished
+      steps:
+      - material: WoodPlank
+        amount: 1
+        doAfter: 2
+      - material: Stone
+        amount: 4
+        doAfter: 2
+
+  - node: finished
+    entity: ToolPestleMortar
+
+- type: construction
+  name: pestle and mortar
+  id: PestleMortar
+  graph: PestleMortar
+  startNode: start
+  targetNode: finished
+  category: construction-category-prim14-tools
+  description: Useful for grinding things up.
+  icon: { sprite: Prim14/pestlemortar.rsi, state: icon }
+  objectType: Item
